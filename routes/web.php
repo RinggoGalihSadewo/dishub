@@ -23,3 +23,6 @@ Route::get('/pengisian-form', 'App\Http\Controllers\PengisianForm@index');
 
 // petunjuk pengisian form
 Route::get('/petunjuk-form', 'App\Http\Controllers\PetunjukForm@index');
+
+// admin
+Route::get('/login', 'App\Http\Controllers\Login@index');
