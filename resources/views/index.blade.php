@@ -21,7 +21,7 @@
                 <img class="d-block w-100" src="/img/slider1.jpg" alt="First slide" width="1280" height="450">
               <div class="carousel-caption d-none d-md-block">
                 <h5 class="h5" style="font-size: 44px; font-style: bold; text-shadow: 2px 2px black;">SELAMAT DATANG</h5>
-                <p style="font-size: 20px; font-style: bold; text-shadow: 2px 2px black;" class="h4">WEBSITE PERIZINAN TRAYEK TRANSPORTASI DARAT</p>
+                <p style="font-size: 20px; font-style: bold; text-shadow: 2px 2px black;" class="h4">Dinas Perhubungan Provinsi Lampung</p>
               </div>
             </div>
             <div class="carousel-item">

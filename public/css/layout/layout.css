@@ -1,7 +1,7 @@
 
 
 *{
-    font-family: roboto;
+    font-family: arial, Sans-serif;
     padding: 0;
     margin: 0; 
     /*background-color: #4366A3;*/
@@ -19,9 +19,10 @@
     color: white;   
     border-bottom: 3px solid #CCAC02;
 }
-.header .h1{
+.header h1{
     margin-left: 40px;
     font-style: normal;
+    font-size: 30px;
 }
 /*nav{
     background-color: #4366A3;

@@ -12,8 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
 
+    <!-- My CSS -->
     <link rel="stylesheet" type="text/css" href="/css/beranda/slider.css">
     <link rel="stylesheet" type="text/css" href="/css/layout/layout.css">
+
+    <!-- Faticon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo2.png">
 
     <title>@yield('title')</title>
   </head>
@@ -29,7 +33,7 @@
             <img src="{{ asset('img/logo2.png') }}" style="width:120px ; height:111px" >
         </div>
         <div class="h1">
-            <p>DINAS PERHUBUNGAN PROVINSI LAMPUNG</p>
+            <h1>WEBSITE PERIZINAN TRAYEK TRANSPORTASI DARAT</h1>
         </div>
     </header>
 
@@ -38,9 +42,9 @@
     <!-- Navbar -->
 
     <nav>
-        <a href="" style="padding-right: 30px;">Beranda</a>
-        <a href="" style="padding-right: 30px;">Petunjuk Pengisian Form</a>
-        <a href="" style="padding-right: 30px;">Pengisian form</a>
+        <a href="{{url('/')}}" style="padding-right: 30px;">Beranda</a>
+        <a href="{{url('/petunjuk-form')}}" style="padding-right: 30px;">Petunjuk Pengisian Form</a>
+        <a href="{{url('/pengisian-form')}}" style="padding-right: 30px;">Pengisian form</a>
     </nav>
 
 

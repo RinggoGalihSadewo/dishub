@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// beranda
 Route::get('/', function () {
     return view('index');
 });
+
+// pengisian form
+Route::get('/pengisian-form', 'App\Http\Controllers\PengisianForm@index');
+
+// petunjuk pengisian form
+Route::get('/petunjuk-form', 'App\Http\Controllers\PetunjukForm@index');
