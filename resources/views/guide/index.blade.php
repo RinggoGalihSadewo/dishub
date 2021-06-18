@@ -6,6 +6,8 @@
 
 @section('container')
 
-<p>Petunjuk pengisian form</p>
+<div class="guide">		
+	<img src="/img/guide.jpeg" width="835px" height="591px">
+</div>
 
 @endsection

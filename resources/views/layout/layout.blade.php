@@ -15,6 +15,8 @@
     <!-- My CSS -->
     <link rel="stylesheet" type="text/css" href="/css/beranda/slider.css">
     <link rel="stylesheet" type="text/css" href="/css/layout/layout.css">
+    <link rel="stylesheet" type="text/css" href="/css/guide/guide.css">
+    <link rel="stylesheet" type="text/css" href="/css/form/form.css">   
 
     <!-- Faticon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/img/logo2.png">

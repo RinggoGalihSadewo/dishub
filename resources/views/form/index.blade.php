@@ -6,7 +6,9 @@
 
 @section('container')
 
-<p>hallo world</p>
+<div class="formulir">
+	<h2>FORM SURAT PERIZINAN</h2>
+</div>
 
 @endsection
 
