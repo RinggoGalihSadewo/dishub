@@ -1,0 +1,61 @@
+.fieldset-logout{
+	position: absolute;
+	width: 497px;
+	height: 170px;
+	top: -40px;
+	right: 0px;
+	background-color: #4366A3;
+	border-width: 2px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #CCAC02;
+}
+
+.h1-logout {
+    position: absolute;
+    width: 443px;
+    height: 35px;
+    left: 25px;
+    top: 7px;
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+
+    color: rgba(252, 249, 238, 0.92);
+    text-align: center;
+}  
+
+
+.button1{
+	position: absolute;
+	width: 120px;
+	height: 42.03px;
+	left: 294px;
+	top: 50px;
+
+    font-weight: bold;
+    background-color: #FE0505;
+    text-align: center;
+    border-radius: 5px;
+    border-color: white;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.cancel1{
+	position: relative;
+    width: 120px;
+    height: 40.28px;
+    left: 294px;
+    top: 70px;
+
+    font-weight: bold;
+    background-color: #CCAC02;
+    text-align: center;
+    border-radius: 5px;
+    border-color: white;
+    font-size: 20px;
+    padding-left: 10px;
+}

@@ -26,3 +26,6 @@ Route::get('/petunjuk-form', 'App\Http\Controllers\PetunjukForm@index');
 
 // admin
 Route::get('/login', 'App\Http\Controllers\Login@index');
+
+// admin
+Route::get('/logout', 'App\Http\Controllers\Logout@index');

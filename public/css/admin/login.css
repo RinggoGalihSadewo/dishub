@@ -1,3 +1,101 @@
 *{
-	background-color: blue;
+	background-color:#4366A3;
 }
+
+.username{
+	position: absolute;
+	width: 326px;
+	height: 42.03px;
+	left: 85px;
+	top: 70px;
+
+	background: rgba(252, 249, 238, 0.92);
+	border: 1px solid #CCAC02;
+	box-sizing: border-box;
+	border-radius: 11px;
+	}
+
+.password{
+	position: absolute;
+	width: 326px;
+	height: 40.28px;
+	left: 85px;
+	top: 150px;
+	
+	background: rgba(252, 249, 238, 0.92);
+	border: 1px solid #CCAC02;
+	box-sizing: border-box;
+	border-radius: 11px;
+	}
+	
+.modal-header{
+	position: absolute;
+    width: 498px;
+    top: -150px;
+    left: 0px;
+	background-color: #FFFFFF;
+	border-color: #CCAC02;
+	}
+	
+.inputan{
+	position: absolute;
+	width: 498px;
+	height: 350px;
+	top: -100px;
+	left: 0px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	
+	}
+	
+.modal-title {
+	position: absolute;
+	width: 361px;
+	height: 38px;
+	left: 60px;
+	top: 10px;
+
+	font-family: Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 37px;
+	color: #CCAC02;
+	text-align: center;
+	justify-content: center;
+	}  
+
+.center{
+	padding-left: 85px;
+	padding-right: 85px;
+	}
+
+.span-eye{
+	position: absolute;
+	bottom: 170px;
+	margin-left: 295px;
+	}
+	
+.sign{
+	position: absolute;
+	width: 165px;
+	height: 42px;
+	left: -25px;
+	top: 200px;
+
+	background: #CCAC02;
+	border-radius: 11px;
+	border-color: white;
+	}
+
+.e-username{
+		position: absolute;
+		left: 90px;
+		top: 120px;
+	}
+
+.e-password{
+		position: absolute;
+		left: 90px;
+		top: 190px;
+	}
