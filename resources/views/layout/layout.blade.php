@@ -31,8 +31,8 @@
 
     <header class="header">
         <div class="logo">
-            <img src="{{ asset('img/logo1.png') }}" style="width:120px ; height:111px; margin-right: 15px; " >
-            <img src="{{ asset('img/logo2.png') }}" style="width:120px ; height:111px" >
+            <img src="{{ asset('img/logo1.png') }}" width="120px" height="111px" class="logo1" >
+            <img src="{{ asset('img/logo2.png') }}" width="120px" height="111px" class="logo2">
         </div>
         <div class="h1">
             <h1>WEBSITE PERIZINAN TRAYEK TRANSPORTASI DARAT</h1>
