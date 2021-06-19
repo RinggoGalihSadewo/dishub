@@ -8,8 +8,18 @@
 }
 .wrapper{
     width: 100%;
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-areas:
+    'header header header'
+    'sidebar content content'
+    'sidebar content content'
+    'sidebar content content'
+    'footer footer footer'
+    ;
 }
 .header{
+    grid-area: header;
     background-color: #4366A3;
     width: 100%;
     height: 135px;
@@ -25,61 +35,44 @@
     font-size: 30px;
 }
 .logo1{
-    margin-right: 15px;
+    margin-right: 0px;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    margin-bottom: 12px;
+}
+ul li a:hover{
+    text-decoration: none;
+    color: white;
+}
+nav{
+    grid-area: sidebar;
+    background-color: #CCAC02;
+    width: 374px;
+    height: 208px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 20px;
+    margin-top: 35px;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;
     color: black;
 }
-nav{
-    padding-right: 20px;
-    padding-left: 20px; 
-    margin-left: 0px;
-    width: 100%;
-    height: 50px;
-    background-color: white;
-    display: flex;
-    align-items: center;
+.content{
+    grid-area: content;
+    height: auto;
+    margin-top: 35px;
+}
 
-}
-nav a{
-    transition: 0.2s;
-}
-nav a:hover{
-    background-color: #CCAC02;
-    text-decoration: none;
-    color: white;
-    height: 50px;
-    box-sizing: border-box;
-    transition: 0.4s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 30px; 
-}
-a .beranda{
-    background-color: #799664;
-    width: 150px;
-    height: 150px;
-    border-radius: 15px;
-    text-align: center;
-    color: black;
-}
-.penjelasan{
+table{
     width: 100%;
-    height: 341px;
-    background-color: #4366A3;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
-    padding-top: 30px; 
-    box-sizing: border-box;
-    border-top: 3px solid #CCAC02;
-    border-bottom: 3px solid #CCAC02;
-    margin-top: 50px; 
 }
 footer{
+    grid-area: footer;
     border-top: 3px solid #CCAC02;
     margin-top: 50px;
     width: 100%;
