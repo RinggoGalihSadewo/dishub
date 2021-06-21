@@ -18,12 +18,12 @@
   </thead>
   <tbody>
 
-    @foreach($users as $user)
+    @foreach($clients as $client)
     <tr>
       <th scope="row">{{ $loop->iteration }}</th>
-      <td>{{ $user->namaPribadi }}</td>
-      <td>{{ $user->namaPerusahaan }}</td>
-      <td>{{ $user->trayek }}</td>
+      <td>{{ $client->namaPribadi }}</td>
+      <td>{{ $client->namaPerusahaan }}</td>
+      <td>{{ $client->trayek }}</td>
       <td>
         <div class="aksi text-center">
           <a href="" class="badge badge-success"><i class="fas fa-edit"></i></a>

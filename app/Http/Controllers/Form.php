@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\user;
+
+
+use App\Models\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class Users extends Controller
+class Form extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +18,11 @@ class Users extends Controller
     public function index()
     {
         //
-        $users = DB::table('users')->get();
-        return view('admin.index', ['users' => $users]);
+        // $clients = DB::table('clients')->get();
+
+        // $clients = \App\Models\Client::all();
+        $clients = Client::all();
+        return view('admin.index', ['clients' => $clients]);
     }
 
     /**

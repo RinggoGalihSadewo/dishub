@@ -35,7 +35,7 @@ Route::get('/logout', 'App\Http\Controllers\Logout@index');
 Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboard@index');
 
 //admin daftar surat pernyataan
-Route::get('/admin/daftar', 'App\Http\Controllers\Users@index');
+Route::get('/admin/daftar', 'App\Http\Controllers\Form@index');
 
 //admin tambah data
 Route::get('/admin/tambah', 'App\Http\Controllers\AdminPengisianForm@index');
