@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Users extends Controller
 {
@@ -15,7 +16,8 @@ class Users extends Controller
     public function index()
     {
         //
-        return view('admin.index');
+        $users = DB::table('users')->get();
+        return view('admin.index', ['users' => $users]);
     }
 
     /**

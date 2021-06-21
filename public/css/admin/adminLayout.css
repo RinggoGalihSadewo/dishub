@@ -48,6 +48,7 @@ ul li a:hover{
     color: white;
 }
 nav{
+	/*position: fixed;*/
     grid-area: sidebar;
     background-color: #CCAC02;
     width: 374px;
@@ -56,6 +57,7 @@ nav{
     border-bottom-right-radius: 25px;
     padding: 20px;
     margin-top: 35px;
+    /*top: 170px;*/
     box-sizing: border-box;
 }
 a{
@@ -67,9 +69,11 @@ a{
     height: auto;
     margin-top: 35px;
 }
-
 table{
     width: 100%;
+}
+.badge{
+    width: 20px;
 }
 footer{
     grid-area: footer;
@@ -130,5 +134,4 @@ footer .f3{
     .slider{
         margin-top: 0;
     }
-
 }        
