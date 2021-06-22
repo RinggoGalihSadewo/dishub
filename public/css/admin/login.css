@@ -4,10 +4,10 @@
 
 .username{
 	position: absolute;
-	width: 326px;
-	height: 42.03px;
-	left: 85px;
-	top: 70px;
+	width: 384px;
+	height: 50px;
+	left: 200px;
+	top: 175px;
 
 	background: rgba(252, 249, 238, 0.92);
 	border: 1px solid #CCAC02;
@@ -17,10 +17,10 @@
 
 .password{
 	position: absolute;
-	width: 326px;
-	height: 40.28px;
-	left: 85px;
-	top: 150px;
+	width: 384px;
+	height: 50px;
+	left: 200px;
+	top: 250px;
 	
 	background: rgba(252, 249, 238, 0.92);
 	border: 1px solid #CCAC02;
@@ -36,13 +36,14 @@
 	background-color: #FFFFFF;
 	border-color: #CCAC02;
 	}
+
 	
 .inputan{
 	position: absolute;
-	width: 498px;
-	height: 350px;
-	top: -100px;
-	left: 0px;
+	width: 815px;
+	height: 500px;
+	top: 180px;
+	left: 347px;
 	background-color: #FFFFFF;
 	border-radius: 5px;
 	
@@ -50,10 +51,12 @@
 	
 .modal-title {
 	position: absolute;
-	width: 361px;
-	height: 38px;
-	left: 60px;
-	top: 10px;
+	width: 400px;
+	height: 200px;
+	left: 300px;
+	top: 350px;
+
+	
 
 	font-family: Arial;
 	font-style: normal;
@@ -78,10 +81,10 @@
 	
 .sign{
 	position: absolute;
-	width: 165px;
+	width: 160px;
 	height: 42px;
-	left: -25px;
-	top: 200px;
+	left: 300px;
+	top: 325px;
 
 	background: #CCAC02;
 	border-radius: 11px;

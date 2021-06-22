@@ -25,7 +25,7 @@ Route::get('/pengisian-form', 'App\Http\Controllers\PengisianForm@index');
 Route::get('/petunjuk-form', 'App\Http\Controllers\PetunjukForm@index');
 
 // admin login
-Route::get('/login', 'App\Http\Controllers\Login@index');
+Route::get('/login1', 'App\Http\Controllers\Login@index');
 
 // admin
 Route::get('/logout', 'App\Http\Controllers\Logout@index');
