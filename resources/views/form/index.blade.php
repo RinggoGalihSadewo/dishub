@@ -10,7 +10,10 @@
 	
 	<h2>FORM SURAT PERIZINAN</h2>
 
-	<form>
+	<form method="POST" action="/pengisian-form/hasil">
+
+	  @csrf
+	  	
 	  <div class="form-group row">
 	    <label for="nama" class="col-sm-4 col-6 col-form-label">Nama Pribadi</label>
 	    <div class="col-sm-8 col-6">

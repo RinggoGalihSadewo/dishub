@@ -10,11 +10,21 @@
 	
 	<h2>FORM SURAT PERIZINAN</h2>
 
-	<form>
+	<form method="POST" action="/admin/daftar">
+
+	  @csrf
+
 	  <div class="form-group row">
 	    <label for="nama" class="col-sm-4 col-6 col-form-label">Nama Pribadi</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control" id="nama" name="nama">
+	      <input type="text" class="form-control @error('namaPribadi') is-invalid @enderror" id="nama" name="nama">
+	      
+	      @error('namaPribadi')
+	      <div class="invalid-feedback">
+	      	Harap Isikan Nama
+	      </div>
+	      @enderror
+
 	    </div>
 	  </div>
 	  <div class="form-group row">

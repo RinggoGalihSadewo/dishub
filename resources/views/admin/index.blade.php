@@ -6,6 +6,13 @@
 @section('container')
 
 
+
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
+
 <table class="table table-bordered">
   <thead style="background-color: #4366A3;">
     <tr class="text-white">

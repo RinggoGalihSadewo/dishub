@@ -18,8 +18,12 @@ Route::get('/', function () {
     return view('index');
 });
 
-// pengisian form
+// tampilan pengisian form
 Route::get('/pengisian-form', 'App\Http\Controllers\PengisianForm@index');
+
+// hasil pengisian form
+Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
+Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 
 // petunjuk pengisian form
 Route::get('/petunjuk-form', 'App\Http\Controllers\PetunjukForm@index');
@@ -38,7 +42,10 @@ Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboard@index');
 Route::get('/admin/daftar', 'App\Http\Controllers\Form@index');
 
 //admin tambah data
-Route::get('/admin/tambah', 'App\Http\Controllers\Form@index');
+Route::get('/admin/tambah', 'App\Http\Controllers\Form@create');
 
 //admin detail
 Route::get('/admin/daftar/detail/{client}', 'App\Http\Controllers\Form@show');
+
+//admin tambah data
+Route::post('/admin/daftar', 'App\Http\Controllers\Form@store');

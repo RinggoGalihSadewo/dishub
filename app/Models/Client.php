@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
-    use HasFactory;
+    // use HasFactory;
+
+    //Mass Assignment
+    protected $fillable = ['namaPribadi', 'alamat', 'ttl', 'namaPerusahaan', 'trayek', 'jmlhArmada', 'platKendaraan', 'merk', 'warna', 'bahanBakar'];
+
+    protected $guarded = [];
 }

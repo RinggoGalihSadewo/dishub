@@ -33,6 +33,13 @@ class Form extends Controller
     public function create()
     {
         //
+        return view('admin.tambah');
+    }
+
+    public function createClient()
+    {
+        //
+        return view('admin.tambah');
     }
 
     /**
@@ -41,10 +48,112 @@ class Form extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    //tambah data admin
+
     public function store(Request $request)
     {
-        //
+        // Cara 1
+
+        // $client = new Client;
+        // $client->namaPribadi = $request->nama;
+        // $client->alamat = $request->alamat;
+        // $client->ttl = $request->ttl;
+        // $client->namaPerusahaan = $request->perusahaan;
+        // $client->trayek = $request->trayek;
+        // $client->jmlhArmada = $request->jmlArmada;
+        // $client->platKendaraan = $request->plat;
+        // $client->merk = $request->merk;
+        // $client->warna = $request->warna;
+        // $client->bahanBakar = $request->bahanBakar;
+
+        // $client->save();
+
+        // validate form admin
+
+        $request->validate([
+                'namaPribadi' => 'required|unique:posts|max:255',
+                'alamat' => 'required',
+                'ttl' => 'required',
+                'namaPerusahaan' => 'required',
+                'trayek' => 'required',
+                'jmlhArmada' => 'required',
+                'platKendaraan' => 'required',
+                'merk' => 'required',
+                'warna' => 'required',
+                'bahanBakar' => 'required'
+            ]);        
+
+        // Cara 2
+
+        Client::create([
+            'namaPribadi' => $request->nama,
+            'alamat' => $request->alamat,
+            'ttl' => $request->ttl,
+            'namaPerusahaan' => $request->perusahaan,
+            'trayek' => $request->trayek,
+            'jmlhArmada' => $request->jmlArmada,
+            'platKendaraan' => $request->plat,
+            'merk' => $request->merk,
+            'warna' => $request->warna,
+            'bahanBakar' => $request->bahanBakar
+        ]);
+
+        // $request->all, mengambil semua Mass Assignment di Models Client
+        // Client::create($request->all());
+
+        return redirect('/admin/daftar')->with('status', 'Data Trayek Berhasil Di Tambahkan!');
     }
+
+    //tambah data client
+
+    public function storeClient(Request $request)
+    {
+        // Cara 1
+
+        // $client = new Client;
+        // $client->namaPribadi = $request->nama;
+        // $client->alamat = $request->alamat;
+        // $client->ttl = $request->ttl;
+        // $client->namaPerusahaan = $request->perusahaan;
+        // $client->trayek = $request->trayek;
+        // $client->jmlhArmada = $request->jmlArmada;
+        // $client->platKendaraan = $request->plat;
+        // $client->merk = $request->merk;
+        // $client->warna = $request->warna;
+        // $client->bahanBakar = $request->bahanBakar;
+
+        // $client->save();
+
+        // Cara 2
+
+        // return $request;
+
+        Client::create([
+            'namaPribadi' => $request->nama,
+            'alamat' => $request->alamat,
+            'ttl' => $request->ttl,
+            'namaPerusahaan' => $request->perusahaan,
+            'trayek' => $request->trayek,
+            'jmlhArmada' => $request->jmlArmada,
+            'platKendaraan' => $request->plat,
+            'merk' => $request->merk,
+            'warna' => $request->warna,
+            'bahanBakar' => $request->bahanBakar
+        ]);
+
+        // $request->all, mengambil semua Mass Assignment di Models Client
+        // Client::create($request->all());
+
+        return view('/form/hasil', ['request' => $request]);
+    }
+
+
+    // tampilan hasil form client
+
+    // public function hasil(Request $request){
+    //     return view('form.hasil', ['request' => $request]);
+    // }    
 
     /**
      * Display the specified resource.
