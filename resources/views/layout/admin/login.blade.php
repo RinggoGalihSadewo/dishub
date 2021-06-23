@@ -8,7 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<!-- <link rel="stylesheet" type="text/css" href="/css/admin/login.css"> -->
-	<link rel="stylesheet" type="text/css" href="/css/admin/login1.css">
+	
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/admin/login1.css">
+
+    <!-- Faticon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo2.png">
+
     <title>@yield('title')</title>
   </head>
   <body>

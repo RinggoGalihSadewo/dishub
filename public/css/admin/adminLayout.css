@@ -72,9 +72,9 @@ a{
 table{
     width: 100%;
 }
-.badge{
+/*.badge{
     width: 20px;
-}
+}*/
 footer{
     grid-area: footer;
     border-top: 3px solid #CCAC02;

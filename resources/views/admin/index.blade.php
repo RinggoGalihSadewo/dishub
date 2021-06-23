@@ -3,12 +3,12 @@
 @section('title', 'Daftar Surat Perizinan')
 
 
-
 @section('container')
+
 
 <table class="table table-bordered">
   <thead style="background-color: #4366A3;">
-    <tr>
+    <tr class="text-white">
       <th scope="col">NO</th>
       <th scope="col">Nama Pribadi</th>
       <th scope="col">Nama Perusahaan</th>
@@ -26,8 +26,9 @@
       <td>{{ $client->trayek }}</td>
       <td>
         <div class="aksi text-center">
-          <a href="" class="badge badge-success"><i class="fas fa-edit"></i></a>
-          <a href="" class="badge badge-danger"><i class="fas fa-trash"></i></a>
+          <a href="" class="badge badge-primary" alt="Detail" title="Detail"><i class="far fa-eye"></i></a>
+          <a href="" class="badge badge-success" alt="Edit" title="Edit"><i class="fas fa-edit"></i></a>
+          <a href="" class="badge badge-danger" alt="Hapus" title="Hapus"><i class="fas fa-trash"></i></a>
         </div>
       </td>
     </tr>
