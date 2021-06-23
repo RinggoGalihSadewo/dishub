@@ -26,7 +26,7 @@
       <td>{{ $client->trayek }}</td>
       <td>
         <div class="aksi text-center">
-          <a href="" class="badge badge-primary" alt="Detail" title="Detail"><i class="far fa-eye"></i></a>
+          <a href="/admin/daftar/detail/{{ $client->id }}" class="badge badge-primary" alt="Detail" title="Detail"><i class="far fa-eye"></i></a>
           <a href="" class="badge badge-success" alt="Edit" title="Edit"><i class="fas fa-edit"></i></a>
           <a href="" class="badge badge-danger" alt="Hapus" title="Hapus"><i class="fas fa-trash"></i></a>
         </div>

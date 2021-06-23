@@ -38,4 +38,7 @@ Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboard@index');
 Route::get('/admin/daftar', 'App\Http\Controllers\Form@index');
 
 //admin tambah data
-Route::get('/admin/tambah', 'App\Http\Controllers\AdminPengisianForm@index');
+Route::get('/admin/tambah', 'App\Http\Controllers\Form@index');
+
+//admin detail
+Route::get('/admin/daftar/detail/{client}', 'App\Http\Controllers\Form@show');
