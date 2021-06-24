@@ -78,7 +78,7 @@
 
 	    <tr>
 	    	<td>
-	    		<b>Warna:</b> {{ $client->warna }}
+	    		<b>Warna Kendaraan:</b> {{ $client->warna }}
 	    	</td>
 	    </tr>
 
