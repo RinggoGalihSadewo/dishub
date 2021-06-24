@@ -17,74 +17,166 @@
 	  <div class="form-group row">
 	    <label for="nama" class="col-sm-4 col-6 col-form-label">Nama Pribadi</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control @error('namaPribadi') is-invalid @enderror" id="nama" name="nama">
+	      <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama">
 	      
-	      @error('namaPribadi')
+	      @error('nama')
 	      <div class="invalid-feedback">
-	      	Harap Isikan Nama
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
 	      </div>
 	      @enderror
 
 	    </div>
 	  </div>
+	  
 	  <div class="form-group row">
 	    <label for="alamat" class="col-sm-4 col-6 col-form-label">Alamat</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control" id="alamat" name="alamat">
+	      <input type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" name="alamat">
+
+	      @error('alamat')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
 	    </div>
 	  </div>
+
+
 	  <div class="form-group row">
 	    <label for="ttl" class="col-sm-4 col-6 col-form-label">TTL</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control" id="ttl" name="ttl">
+	      <input type="text" class="form-control @error('ttl') is-invalid @enderror" id="ttl" name="ttl">
+
+	      @error('ttl')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
+
 	    </div>
 	  </div>
+
 	  <div class="form-group row">
 	    <label for="namaPerusahaan" class="col-sm-4 col-6 col-form-label">Nama Perusahaan</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control" id="namaPerusahaan" name="perusahaan">
+	      <input type="text" class="form-control @error('perusahaan') is-invalid @enderror" id="namaPerusahaan" name="perusahaan">
+	   
+	      @error('perusahaan')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
+
 	    </div>
 	  </div>
+
 	  <div class="form-group row">
 	    <label for="trayek" class="col-sm-4 col-6 col-form-label">Trayek</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control" id="trayek" name="trayek">
+	      <input type="text" class="form-control @error('trayek') is-invalid @enderror" id="trayek" name="trayek">
+
+	      @error('trayek')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
+
 	    </div>
 	  </div>
+
 	  <div class="form-group row">
 	    <label for="jumlahArmada" class="col-sm-4 col-6 col-form-label">Jumlah Armada</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control" id="jumlahArmada" name="jmlArmada">
+	      <input type="text" class="form-control @error('jmlArmada') is-invalid @enderror" id="jumlahArmada" name="jmlArmada">
+
+		  @error('jmlArmada')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
+
 	    </div>
 	  </div>
+
 	  <div class="form-group row">
 	    <label for="plat" class="col-sm-4 col-6 col-form-label">Plat Kendaraan</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control" id="plat" name="plat">
+	      <input type="text" class="form-control @error('plat') is-invalid @enderror" id="plat" name="plat">
+
+	      @error('plat')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
+	  
 	    </div>
 	  </div>
+
 	  <div class="form-group row">
 	    <label for="merk" class="col-sm-4 col-6 col-form-label">Merk Kendaraan</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control" id="merk" name="merk">
+	      <input type="text" class="form-control @error('merk') is-invalid @enderror" id="merk" name="merk">
+
+	      @error('merk')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
+
 	    </div>
 	  </div>
+
 	  <div class="form-group row">
 	    <label for="warna" class="col-sm-4 col-6 col-form-label">Warna Kendaraan</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control" id="warna" name="warna">
+	      <input type="text" class="form-control @error('warna') is-invalid @enderror" id="warna" name="warna">
+
+	      @error('warna')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
+
 	    </div>
 	  </div>
+
 	  <div class="form-group row">
 	    <label for="bahanBakar" class="col-sm-4 col-6 col-form-label">Bahan Bakar</label>
 	    <div class="col-sm-8 col-6">
-	      <input type="text" class="form-control" id="bahanBakar" name="bahanBakar">
+	      <input type="text" class="form-control @error('bahanBakar') is-invalid @enderror" id="bahanBakar" name="bahanBakar">
+
+	      @error('bahanBakar')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
+	   
 	    </div>
 	  </div>
+
 	  <button type="submit" class="btn" style="background-color: #CCAC02; color: white;" name="submit">KIRIM</button>	  	  	  	  	  	  	  	  
 	</form>
 
 </div>
 
 @endsection
-
