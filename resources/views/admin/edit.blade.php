@@ -10,8 +10,9 @@
 	
 	<h2>EDIT FORM SURAT PERIZINAN</h2>
 
-	<form method="POST" action="/admin/daftar">
+	<form method="POST" action="/admin/daftar/{{ $client->id }}">
 
+	  @method('patch')
 	  @csrf
 
 	  <div class="form-group row">

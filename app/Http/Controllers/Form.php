@@ -193,11 +193,6 @@ class Form extends Controller
 
     }
 
-    public function editTest()
-    {
-        return view('admin.edit');
-    }
-
     /**
      * Update the specified resource in storage.
      *
@@ -208,6 +203,38 @@ class Form extends Controller
     public function update(Request $request, Client $client)
     {
         //
+
+        $nama = $request->nama;
+
+        $request->validate([
+            'nama' => 'required',
+            'alamat' => 'required',
+            'ttl' => 'required',
+            'perusahaan' => 'required',
+            'trayek' => 'required',
+            'jmlArmada' => 'required',
+            'plat' => 'required',
+            'merk' => 'required',
+            'warna' => 'required',
+            'bahanBakar' => 'required'
+        ]);
+
+        Client::where('id', $client->id)
+                ->update([
+                    'namaPribadi' => $request->nama,
+                    'alamat' => $request->alamat,
+                    'ttl' => $request->ttl,
+                    'namaPerusahaan' => $request->perusahaan,
+                    'trayek' => $request->trayek,
+                    'jmlhArmada' => $request->jmlArmada,
+                    'platKendaraan' => $request->plat,
+                    'merk' => $request->merk,
+                    'warna' => $request->warna,
+                    'bahanBakar' => $request->bahanBakar
+                ]);
+
+        return redirect('/admin/daftar')->with('statusEdit', 'Data Dengan Nama '. $nama . ' Berhasil Di Ubah!');
+
     }
 
     /**

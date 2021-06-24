@@ -13,6 +13,12 @@
     </div>
 @endif
 
+@if (session('statusEdit'))
+    <div class="alert alert-success">
+        {{ session('statusEdit') }}
+    </div>
+@endif
+
 <table class="table table-bordered">
   <thead style="background-color: #4366A3;">
     <tr class="text-white">
@@ -35,7 +41,9 @@
         <div class="aksi text-center">
           <a href="/admin/daftar/detail/{{ $client->id }}" class="badge badge-primary" alt="Detail" title="Detail"><i class="far fa-eye"></i></a>
           <a href="/admin/daftar/edit/{{ $client->id }}" class="badge badge-success" alt="Edit" title="Edit"><i class="fas fa-edit"></i></a>
-          <a href="" class="badge badge-danger" alt="Hapus" title="Hapus"><i class="fas fa-trash"></i></a>
+
+          <a href="/admin/daftar/{{$client->id}}" class="badge badge-danger" alt="Hapus" title="Hapus"><i class="fas fa-trash"></i></a>
+
         </div>
       </td>
     </tr>
