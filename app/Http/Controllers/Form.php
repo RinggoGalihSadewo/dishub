@@ -69,25 +69,23 @@ class Form extends Controller
 
         // $client->save();
 
-        // validate form admin
-
+        // validate form admin        
         $request->validate([
-                'namaPribadi' => 'required|unique:posts|max:255',
+                'nama' => 'required',
                 'alamat' => 'required',
                 'ttl' => 'required',
-                'namaPerusahaan' => 'required',
+                'perusahaan' => 'required',
                 'trayek' => 'required',
-                'jmlhArmada' => 'required',
-                'platKendaraan' => 'required',
+                'jmlArmada' => 'required',
+                'plat' => 'required',
                 'merk' => 'required',
                 'warna' => 'required',
                 'bahanBakar' => 'required'
-            ]);        
-
+            ]);
         // Cara 2
 
         Client::create([
-            'namaPribadi' => $request->nama,
+            'na/maPribadi' => $request->nama,
             'alamat' => $request->alamat,
             'ttl' => $request->ttl,
             'namaPerusahaan' => $request->perusahaan,
@@ -98,6 +96,8 @@ class Form extends Controller
             'warna' => $request->warna,
             'bahanBakar' => $request->bahanBakar
         ]);
+
+
 
         // $request->all, mengambil semua Mass Assignment di Models Client
         // Client::create($request->all());
@@ -129,6 +129,19 @@ class Form extends Controller
 
         // return $request;
 
+            $request->validate([
+            'nama' => 'required',
+            'alamat' => 'required',
+            'ttl' => 'required',
+            'perusahaan' => 'required',
+            'trayek' => 'required',
+            'jmlArmada' => 'required',
+            'plat' => 'required',
+            'merk' => 'required',
+            'warna' => 'required',
+            'bahanBakar' => 'required'
+        ]);
+
         Client::create([
             'namaPribadi' => $request->nama,
             'alamat' => $request->alamat,
@@ -145,7 +158,7 @@ class Form extends Controller
         // $request->all, mengambil semua Mass Assignment di Models Client
         // Client::create($request->all());
 
-        return view('/form/hasil', ['request' => $request]);
+        return view('/form/hasil', ['request' => $request])->with('status', 'Data Trayek Berhasil Di Tambahkan!');
     }
 
 
@@ -176,6 +189,13 @@ class Form extends Controller
     public function edit(Client $client)
     {
         //
+        return view('admin.edit', compact('client'));
+
+    }
+
+    public function editTest()
+    {
+        return view('admin.edit');
     }
 
     /**

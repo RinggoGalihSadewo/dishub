@@ -49,3 +49,6 @@ Route::get('/admin/daftar/detail/{client}', 'App\Http\Controllers\Form@show');
 
 //admin tambah data
 Route::post('/admin/daftar', 'App\Http\Controllers\Form@store');
+
+//admin edit
+Route::get('/admin/daftar/edit/{client}','App\Http\Controllers\Form@edit');
