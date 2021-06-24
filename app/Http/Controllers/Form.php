@@ -246,5 +246,10 @@ class Form extends Controller
     public function destroy(Client $client)
     {
         //
+        $nama = $client->namaPribadi;
+
+        Client::destroy($client->id);
+
+        return redirect('/admin/daftar')->with('statusHapus', 'Data Dengan Nama '. $nama . ' Berhasil Di Hapus!');
     }
 }

@@ -54,7 +54,7 @@ Route::post('/admin/daftar', 'App\Http\Controllers\Form@store');
 Route::get('/admin/daftar/edit/{client}','App\Http\Controllers\Form@edit');
 
 //admin hapus
-// Route::delete()
+Route::get('/admin/daftar/hapus/{client}', 'App\Http\Controllers\Form@destroy');
 
 //admin edit data
 Route::patch('/admin/daftar/{client}', 'App\Http\Controllers\form@update');
