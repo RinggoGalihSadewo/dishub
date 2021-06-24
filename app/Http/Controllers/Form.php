@@ -85,7 +85,7 @@ class Form extends Controller
         // Cara 2
 
         Client::create([
-            'na/maPribadi' => $request->nama,
+            'namaPribadi' => $request->nama,
             'alamat' => $request->alamat,
             'ttl' => $request->ttl,
             'namaPerusahaan' => $request->perusahaan,
