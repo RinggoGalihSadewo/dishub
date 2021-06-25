@@ -32,7 +32,7 @@
 	  </div>
 	  
 	  <div class="form-group row">
-	    <label for="alamat" class="col-sm-4 col-6 col-form-label">Alamat</label>
+	    <label for="alamat" class="col-sm-4 col-6 col-form-label">Alamat Perusahaan</label>
 	    <div class="col-sm-8 col-6">
 	      <input type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" name="alamat" value="{{ $client->alamat }}">
 

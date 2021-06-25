@@ -36,7 +36,7 @@
 
 	    <tr>
 	    	<td>
-	    		<b>Alamat:</b> {{ $client->alamat }}
+	    		<b>Alamat Perusahaan:</b> {{ $client->alamat }}
 	    	</td>
 	    </tr>
 
@@ -86,7 +86,19 @@
 	    	<td>
 	    		<b>Bahan Bakar:</b> {{ $client->bahanBakar }}
 	    	</td>
-	    </tr>	    
+	    </tr>
+
+	   	<tr>
+	    	<td>
+	    		<b>Tanggal dan Waktu Pembuatan Perizinan:</b> {{ $client->created_at }}
+	    	</td>
+	    </tr>
+
+	    <tr>
+	    	<td>
+	    		<b>Data Terakhir di Update:</b> {{ $client->updated_at }}
+	    	</td>
+	    </tr>		    
 
 	  </tbody>
 	</table>

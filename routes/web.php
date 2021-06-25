@@ -21,9 +21,12 @@ Route::get('/', function () {
 // tampilan pengisian form
 Route::get('/pengisian-form', 'App\Http\Controllers\PengisianForm@index');
 
-// hasil pengisian form
+// // hasil pengisian form
 Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
+
+// //develop view hasil form
+// Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 
 // petunjuk pengisian form
 Route::get('/petunjuk-form', 'App\Http\Controllers\PetunjukForm@index');

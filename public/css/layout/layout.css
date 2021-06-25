@@ -105,6 +105,48 @@ footer .f3{
     color: white;
 }
 
+/*CSS Hasil Form*/
+.hasil{
+    width: 65%;
+    height: 900px;
+    border: 1px solid black;
+    margin: 20px auto;
+    position: relative;
+}
+.headerHasil{
+    display: flex;
+    height: auto;
+    border-bottom: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.lampiran{
+    height: auto;
+    position: absolute;
+    right: 0px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 12px;
+    border-bottom: 1px
+}
+.isiLampiran{
+    height: auto;
+    padding: 60px;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 100px;
+}
+.paraf{
+    margin-top: -40px;
+    position: absolute;
+    right: 0px;
+    font-size: 12px;
+    padding: 60px;
+    bottom: 0px;
+}
+
 @media (max-width: 576px){
     .wrapper{
         text-align: center;

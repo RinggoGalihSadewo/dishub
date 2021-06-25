@@ -155,10 +155,13 @@ class Form extends Controller
             'bahanBakar' => $request->bahanBakar
         ]);
 
-        // $request->all, mengambil semua Mass Assignment di Models Client
-        // Client::create($request->all());
+        // // $request->all, mengambil semua Mass Assignment di Models Client
+        // // Client::create($request->all());
 
         return view('/form/hasil', ['request' => $request])->with('status', 'Data Trayek Berhasil Di Tambahkan!');
+
+        //develop view hasil form
+        return view('form.hasil', compact('request'));
     }
 
 
