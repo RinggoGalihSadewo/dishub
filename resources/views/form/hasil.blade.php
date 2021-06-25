@@ -20,7 +20,7 @@
 		</div>
 
 		<div class="lampiran">
-			<p>Bandar Lampung, {{ $request->created_at }}</p>
+			<p>Bandar Lampung, {{ $officialDate }} </p>
 			Kepada
 			Yth. Kepala Dinas Provinsi Lampung
 

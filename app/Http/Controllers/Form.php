@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Models\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class Form extends Controller
 {
@@ -54,7 +55,6 @@ class Form extends Controller
     public function store(Request $request)
     {
         // Cara 1
-
         // $client = new Client;
         // $client->namaPribadi = $request->nama;
         // $client->alamat = $request->alamat;
@@ -68,6 +68,10 @@ class Form extends Controller
         // $client->bahanBakar = $request->bahanBakar;
 
         // $client->save();
+
+        // Timezone jakarta
+        date_default_timezone_set("Asia/Jakarta");
+        $jkt = date("d/m/Y H:i:s");
 
         // validate form admin        
         $request->validate([
@@ -94,7 +98,9 @@ class Form extends Controller
             'platKendaraan' => $request->plat,
             'merk' => $request->merk,
             'warna' => $request->warna,
-            'bahanBakar' => $request->bahanBakar
+            'bahanBakar' => $request->bahanBakar,
+            'created_at' => $jkt,
+            'updated_at' => $jkt
         ]);
 
 
@@ -102,7 +108,7 @@ class Form extends Controller
         // $request->all, mengambil semua Mass Assignment di Models Client
         // Client::create($request->all());
 
-        return redirect('/admin/daftar')->with('status', 'Data Trayek Berhasil Di Tambahkan!');
+        return redirect('/admin/daftar')->with('status', 'Data Trayek Berhasil di Tambahkan!');
     }
 
     //tambah data client
@@ -110,7 +116,7 @@ class Form extends Controller
     public function storeClient(Request $request)
     {
         // Cara 1
-
+        $officialDate = Carbon::now()->toDateString();
         // $client = new Client;
         // $client->namaPribadi = $request->nama;
         // $client->alamat = $request->alamat;
@@ -129,7 +135,11 @@ class Form extends Controller
 
         // return $request;
 
-            $request->validate([
+        // Timezone jakarta
+        date_default_timezone_set("Asia/Jakarta");
+        $jkt = date("d/m/Y H:i:s");
+
+        $request->validate([
             'nama' => 'required',
             'alamat' => 'required',
             'ttl' => 'required',
@@ -152,16 +162,18 @@ class Form extends Controller
             'platKendaraan' => $request->plat,
             'merk' => $request->merk,
             'warna' => $request->warna,
-            'bahanBakar' => $request->bahanBakar
+            'bahanBakar' => $request->bahanBakar,
+            'created_at' => $jkt,
+            'updated_at' => $jkt
         ]);
 
         // // $request->all, mengambil semua Mass Assignment di Models Client
         // // Client::create($request->all());
 
-        return view('/form/hasil', ['request' => $request])->with('status', 'Data Trayek Berhasil Di Tambahkan!');
+        return view('/form/hasil', ['request' => $request], compact('officialDate') )->with('status', 'Data Trayek Berhasil di Tambahkan!');
 
         //develop view hasil form
-        return view('form.hasil', compact('request'));
+        // return view('form.hasil', compact('request'), compact('officialDate'));
     }
 
 
@@ -207,6 +219,10 @@ class Form extends Controller
     {
         //
 
+        // Timezone jakarta
+        date_default_timezone_set("Asia/Jakarta");
+        $jkt = date("d/m/Y H:i:s");
+
         $nama = $request->nama;
 
         $request->validate([
@@ -233,15 +249,15 @@ class Form extends Controller
                     'platKendaraan' => $request->plat,
                     'merk' => $request->merk,
                     'warna' => $request->warna,
-                    'bahanBakar' => $request->bahanBakar
+                    'bahanBakar' => $request->bahanBakar,
                 ]);
 
-        return redirect('/admin/daftar')->with('statusEdit', 'Data Dengan Nama '. $nama . ' Berhasil Di Ubah!');
+        return redirect('/admin/daftar')->with('statusEdit', 'Data dengan nama '. $nama . ' Berhasil di ubah!');
 
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified resource frodm storage.
      *
      * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
