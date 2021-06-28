@@ -30,12 +30,14 @@
     <!-- Header -->
 
     <header class="header">
-        <div class="logo">
+        <div class="logo1">
             <img src="{{ asset('img/logo1.png') }}" width="120px" height="111px" class="logo1" >
-            <img src="{{ asset('img/logo2.png') }}" width="120px" height="111px" class="logo2">
         </div>
         <div class="h1">
             <h1>WEBSITE PERIZINAN TRAYEK TRANSPORTASI DARAT</h1>
+        </div>
+        <div class="logo2">
+            <img src="{{ asset('img/logo2.png') }}" width="120px" height="111px" class="logo2">
         </div>
     </header>
 

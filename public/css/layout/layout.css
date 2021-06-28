@@ -20,12 +20,16 @@
     border-bottom: 3px solid #CCAC02;
 }
 .header h1{
-    margin-left: 40px;
+    /* margin-left: 40px; */
     font-style: normal;
     font-size: 30px;
+    
 }
 .logo1{
     margin-right: 15px;
+}
+.logo2{
+    margin-left: 15px;
 }
 a{
     text-decoration: none;
