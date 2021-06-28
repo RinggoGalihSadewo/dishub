@@ -13,8 +13,13 @@
     </div>
     <div class="login" style="background-color: #FFFFFF;">
 
+    @if(session('status'))
+        <div class="alert alert-danger" role="alert">
+          Username atau Password salah!
+        </div>
+    @endif   
 
-    <form action="/admin/daftar" method="POST">
+    <form action="/login" method="POST">
 
         @csrf
 

@@ -48,7 +48,7 @@
         <ul>
             <li><a href="{{ url('/admin/daftar') }}"><img src="/img/file.png">  Daftar Surat Perizinan</a></li>
             <li><a href="{{ url('/admin/tambah') }}"><img src="/img/add.png">  Tambah File</a></li>
-            <li><a href="{{ url('/') }}"><img src="/img/logout.png">  LOGOUT</a></li>
+            <li><a href="{{ url('/logout') }}"><img src="/img/logout.png">  LOGOUT</a></li>
         </ul>
 
     </nav>

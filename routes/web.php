@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::post('/admin/daftar', 'App\Http\Controllers\Login@postLogin');
+Route::post('/login', 'App\Http\Controllers\Auth@login');
 
 // tampilan pengisian form
 Route::get('/pengisian-form', 'App\Http\Controllers\PengisianForm@index');
@@ -34,11 +34,10 @@ Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 Route::get('/petunjuk-form', 'App\Http\Controllers\PetunjukForm@index');
 
 // admin login
-Route::get('/login', 'App\Http\Controllers\Login@index');
+Route::get('/login', 'App\Http\Controllers\Auth@index');
 
-// admin
-Route::get('/logout', 'App\Http\Controllers\Logout@index');
 
+Route::group(['middleware' => 'CekLogin'], function() {
 
 //admin dashboard
 Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboard@index');
@@ -63,3 +62,9 @@ Route::get('/admin/daftar/hapus/{client}', 'App\Http\Controllers\Form@destroy');
 
 //admin edit data
 Route::patch('/admin/daftar/{client}', 'App\Http\Controllers\form@update');
+
+// admin logout
+Route::get('/logout', 'App\Http\Controllers\Auth@logout');
+
+});
+
