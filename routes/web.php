@@ -23,9 +23,13 @@ Route::post('/login', 'App\Http\Controllers\Auth@login');
 // tampilan pengisian form
 Route::get('/pengisian-form', 'App\Http\Controllers\PengisianForm@index');
 
-// // hasil pengisian form
+// hasil pengisian form
 Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
+// Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@cetakPDF');
 Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
+
+// cetak pdf
+Route::get('/pengisian-form/hasil/cetakPDF', 'App\Http\Controllers\Form@cetakPDF');
 
 // //develop view hasil form
 // Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');

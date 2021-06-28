@@ -8,6 +8,7 @@ use App\Models\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use PDF;
 
 class Form extends Controller
 {
@@ -171,9 +172,23 @@ class Form extends Controller
         // // Client::create($request->all());
 
         return view('/form/hasil', ['request' => $request], compact('officialDate') )->with('status', 'Data Trayek Berhasil di Tambahkan!');
+                $pdf = PDF::loadview('form.cetak', compact('request'), compact('officialDate'));
+        $pdf = PDF::loadview('cetak');        
+        return $pdf->download('$request->nama');
 
         //develop view hasil form
         // return view('form.hasil', compact('request'), compact('officialDate'));
+    }
+
+    // cetak pdf
+
+    public function cetakPDF()
+    {
+        $officialDate = Carbon::now()->toDateString();
+
+        $pdf = PDF::loadview('cetak');
+
+        return $pdf->stream();
     }
 
 
