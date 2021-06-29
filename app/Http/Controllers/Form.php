@@ -8,7 +8,7 @@ use App\Models\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
-use PDF;
+use \PDF;
 
 class Form extends Controller
 {
@@ -182,13 +182,15 @@ class Form extends Controller
 
     // cetak pdf
 
-    public function cetakPDF()
-    {
-        $officialDate = Carbon::now()->toDateString();
+    public function cetakPDF2()
+    {   
+        // $officialDate = Carbon::now()->toDateString();
+        $nama = "ringgo";
+        // $pdf = PDF::loadview('cetak');
 
-        $pdf = PDF::loadview('cetak');
-
-        return $pdf->stream();
+        // return $pdf->stream();
+        $pdf = PDF::loadView('cetak', compact('nama'));
+        return $pdf->download('oke.pdf');
     }
 
 

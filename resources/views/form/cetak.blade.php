@@ -14,7 +14,7 @@
     <title>Cetak Formulir</title>
   </head>
   <body>
-    <h3>{{ $nama }}</h3>
+
     <div class="hasil">
         <div class="headerHasil">
             <img src="{{ asset('img/logo1.png') }}" width="80px" height="80px" class="logo1" >

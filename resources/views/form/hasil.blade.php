@@ -75,7 +75,7 @@
 
 <center>
 
-	<h4>Alamat GPS Dinas Perhubungan Provinsi Lampung: </h4>
+	<h4>Alamat GPS Dinas Perhubungan Provinsi Lampung</h4>
 
 	<div class="embed-responsive embed-responsive-16by9" style="width: 65%; height: 400px">
 		

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Form;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,7 @@ Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 
 // cetak pdf
-Route::get('/pengisian-form/hasil/cetakPDF', 'App\Http\Controllers\Form@cetakPDF');
+Route::get('cetakPDF', [Form::class, 'cetakPDF2']);
 
 // //develop view hasil form
 // Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
