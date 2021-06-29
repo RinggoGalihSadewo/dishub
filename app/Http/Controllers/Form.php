@@ -173,8 +173,6 @@ class Form extends Controller
 
         return view('/form/hasil', ['request' => $request], compact('officialDate') )->with('status', 'Data Trayek Berhasil di Tambahkan!');
                 $pdf = PDF::loadview('form.cetak', compact('request'), compact('officialDate'));
-        $pdf = PDF::loadview('cetak');        
-        return $pdf->download('$request->nama');
 
         //develop view hasil form
         // return view('form.hasil', compact('request'), compact('officialDate'));
