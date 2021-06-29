@@ -13,7 +13,8 @@ use App\Http\Controllers\Form;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// cetak pdf
+Route::get('/pengisian-form/hasil/cetakPDF', 'App\Http\Controllers\Form@cetakPDF');
 // beranda
 Route::get('/', function () {
     return view('index');
@@ -24,13 +25,15 @@ Route::post('/login', 'App\Http\Controllers\Auth@login');
 // tampilan pengisian form
 Route::get('/pengisian-form', 'App\Http\Controllers\PengisianForm@index');
 
+Route::post('/pengisian-form/hasil/cetakPDF', 'App\Http\Controllers\Form@cetakPDF');
+
+
 // hasil pengisian form
 Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 // Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@cetakPDF');
 Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 
-// cetak pdf
-Route::get('cetakPDF', [Form::class, 'cetakPDF2']);
+
 
 // //develop view hasil form
 // Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
