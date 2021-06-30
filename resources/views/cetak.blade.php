@@ -18,11 +18,11 @@
 
     <div class="hasil">
         <div class="headerHasil">
-            <!-- <img src="{{ asset('img/logo1.png') }}" width="80px" height="80px" class="logo1" > -->
+            <img src="{{ storage_path('app/public/logo1.png') }}" width="80px" height="80px" class="logo1" >
 
             <h2>Surat Permohonan Perizinan Trayek Transportasi Darat</h2>
 
-            <!-- <img src="{{ asset('img/logo2.png') }}" width="80px" height="80px" class="logo2"> -->
+            <img src="{{ storage_path('app/public/logo2.png') }}" width="80px" height="80px" class="logo2">
         </div>
 
         <div class="lampiran">
@@ -38,7 +38,7 @@
             <br>
             Yang bertanda tangan di bawah ini:
             <br><br>
-            Nama: {{ $request->namaPribadi }}
+                Nama: {{ $request->namaPribadi }}
             <br>
             TTL: {{ $request->ttl }}
             <br><br>
