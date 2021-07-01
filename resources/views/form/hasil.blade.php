@@ -15,13 +15,14 @@
 	</center>
 
 	<div class="hasil">
-		<div class="headerHasil">
-			<img src="{{ asset('img/logo1.png') }}" width="80px" height="80px" class="logo1" >
 
-			<h2>Surat Permohonan Perizinan Trayek Transportasi Darat</h2>
+		<center>
+		
+		<img src="{{ asset('img/KOP.png') }}">
 
-            <img src="{{ asset('img/logo2.png') }}" width="80px" height="80px" class="logo2">
-		</div>
+		</center>
+
+		<br>
 
 		<div class="lampiran">
 			<p>Bandar Lampung, {{ $officialDate }} </p>
@@ -35,28 +36,75 @@
 			Dengan hormat,
 			<br>
 			Yang bertanda tangan di bawah ini:
+			
 			<br><br>
-			Nama: {{ $request->nama }}
-			<br>
-			TTL: {{ $request->ttl }}
+			
+			<table border="0" cellspacing="0">
+                <tr>
+                    <td>Nama   </td> 
+                    <td>: </td>
+                    <td> {{ $request->nama }}</td>
+                </tr>
+                <tr>
+                    <td>Email   </td> 
+                    <td>: </td>
+                    <td> {{ $request->email }}</td>
+                </tr>
+                <tr>
+                    <td>TTL</td>
+                    <td>:</td>
+                    <td> {{ $request->ttl }}</td>
+                <tr>
+            </table>
+
 			<br><br>
 			Dengan ini mengajukan permohonan Izin Trayek / Izin Operasi untuk dan atas nama:
+		
 			<br><br>
-			Nama Perusahaan: {{ $request->perusahaan }}
-			<br>
-			Alamat Perusahaan: {{ $request->alamat }}
-			<br>
-			Trayek: {{ $request->trayek }}
-			<br>
-			Jumlah Armada: {{ $request->jmlArmada }}
-			<br>
-			Plat Kendaraan: {{ $request->plat }}
-			<br>
-			Merk Kendaraan: {{ $request->merk }}
-			<br>
-			Warna Kendaraan: {{ $request->warna }}
-			<br>
-			Bahan Bakar: {{ $request->bahanBakar }}
+
+			<table border="0" cellspacing="0">
+                <tr>
+                    <td>Nama Perusahaan</td>
+                    <td>: </td>
+                    <td>{{ $request->perusahaan }}</td>
+                </tr>
+                <tr>
+                    <td>Alamat Perusahaan      </td>
+                    <td>: </td>
+                    <td>{{ $request->alamat }}</td>
+                </tr>
+                <tr>
+                    <td>Trayek</td>
+                    <td>: </td>
+                    <td>{{ $request->trayek }}</td>
+                </tr>
+                <tr>
+                    <td>Jumlah Armada</td>
+                    <td>: </td>
+                    <td>{{ $request->jmlArmada }}</td>
+                </tr>
+                <tr>
+                    <td>Plat Kendaraan</td>
+                    <td>: </td>
+                    <td>{{ $request->plat }}</td>
+                </tr>
+                <tr>
+                    <td>Merk Kendaraan</td>
+                    <td>: </td>
+                    <td>{{ $request->merk }}</td>
+                </tr>
+                <tr>
+                    <td>Warna Kendaraan</td>
+                    <td>: </td>
+                    <td>{{ $request->warna }}</td>
+                </tr>
+                <tr>
+                    <td>Bahan Bakar</td>
+                    <td>: </td>
+                    <td>{{ $request->bahanBakar }}</td>
+                </tr>
+            </table>
+
 			<br><br>
 			<p style="text-align: justify;">
 			Bersama ini kami mengajukan permohonan izin Trayek / Izin Operasi dengan melampirkan persyaratan sesuai ketentuan Demikian Surat Permohonan ini telah di isi dengan sebenarnya dan apabila di kemudian hari ternyata keterangan - keterangan tersebut tidak benar, maka kami bersedia menerima sanksi / di tuntut sesuai dengan peraturan perundang - undangan yang berlaku
