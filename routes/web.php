@@ -35,6 +35,9 @@ Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 
 Route::get('/admin/daftar/kirim-notifikasi/{client}','App\Http\Controllers\MailController@index');
 
+// Route::get('/admin/daftar/kirim-notifikasi/{client}','App\Mail\SendGmail@build');
+
+
 // //develop view hasil form
 // Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 

@@ -14,8 +14,20 @@ class MailController extends Controller
     	$details = [
 
     		'title' => 'judul',
-    		'body' => 'ini bagian body'
-
+    		'body' => 'ini bagian body',
+    		'nama' => $client->namaPribadi,
+    		'email' => $client->email,
+    		'alamat' => $client->alamat,
+    		'ttl' => $client->ttl,
+    		'perusahaan' =>$client->namaPerusahaan,
+    		'trayek' => $client->trayek,
+    		'jmlArmada' => $client->jmlhArmada,
+    		'plat' => $client->platKendaraan,
+    		'merk' => $client->merk,
+    		'warna' => $client->warna,
+    		'bahanBakar' => $client->bahanBakar,
+    		'created_at' => $client->created_at
+    		
     	];
 
     	Mail::to($client->email)->send(new \App\Mail\SendGmail($details));
