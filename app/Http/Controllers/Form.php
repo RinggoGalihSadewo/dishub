@@ -17,12 +17,11 @@ class Form extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // tampilkan data 
+
     public function index()
     {
-        //
-        // $clients = DB::table('clients')->get();
-
-        // $clients = \App\Models\Client::all();
         $clients = Client::all();
         return view('admin.index', ['clients' => $clients]);
     }
@@ -32,15 +31,12 @@ class Form extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // tampilan tambah data admin
+
     public function create()
     {
-        //
-        return view('admin.tambah');
-    }
-
-    public function createClient()
-    {
-        //
+        
         return view('admin.tambah');
     }
 
@@ -51,24 +47,11 @@ class Form extends Controller
      * @return \Illuminate\Http\Response
      */
 
+
     //tambah data admin
 
     public function store(Request $request)
     {
-        // Cara 1
-        // $client = new Client;
-        // $client->namaPribadi = $request->nama;
-        // $client->alamat = $request->alamat;
-        // $client->ttl = $request->ttl;
-        // $client->namaPerusahaan = $request->perusahaan;
-        // $client->trayek = $request->trayek;
-        // $client->jmlhArmada = $request->jmlArmada;
-        // $client->platKendaraan = $request->plat;
-        // $client->merk = $request->merk;
-        // $client->warna = $request->warna;
-        // $client->bahanBakar = $request->bahanBakar;
-
-        // $client->save();
 
         // Timezone jakarta
         date_default_timezone_set("Asia/Jakarta");
@@ -87,8 +70,8 @@ class Form extends Controller
                 'warna' => 'required',
                 'bahanBakar' => 'required'
             ]);
-        // Cara 2
-
+        
+        //create data
         Client::create([
             'namaPribadi' => $request->nama,
             'alamat' => $request->alamat,
@@ -104,37 +87,17 @@ class Form extends Controller
             'updated_at' => $jkt
         ]);
 
-
-
-        // $request->all, mengambil semua Mass Assignment di Models Client
-        // Client::create($request->all());
-
         return redirect('/admin/daftar')->with('status', 'Data Trayek Berhasil di Tambahkan!');
     }
+
 
     //tambah data client
 
     public function storeClient(Request $request)
     {
-        // Cara 1
+
+        // tanggal bulan tahun saat ini
         $officialDate = Carbon::now()->toDateString();
-        // $client = new Client;
-        // $client->namaPribadi = $request->nama;
-        // $client->alamat = $request->alamat;
-        // $client->ttl = $request->ttl;
-        // $client->namaPerusahaan = $request->perusahaan;
-        // $client->trayek = $request->trayek;
-        // $client->jmlhArmada = $request->jmlArmada;
-        // $client->platKendaraan = $request->plat;
-        // $client->merk = $request->merk;
-        // $client->warna = $request->warna;
-        // $client->bahanBakar = $request->bahanBakar;
-
-        // $client->save();
-
-        // Cara 2
-
-        // return $request;
 
         // Timezone jakarta
         date_default_timezone_set("Asia/Jakarta");
@@ -168,34 +131,20 @@ class Form extends Controller
             'updated_at' => $jkt
         ]);
 
-        // // $request->all, mengambil semua Mass Assignment di Models Client
-        // // Client::create($request->all());
-
         return view('/form/hasil', ['request' => $request], compact('officialDate') )->with('status', 'Data Trayek Berhasil di Tambahkan!');
-                $pdf = PDF::loadview('form.cetak', compact('request'), compact('officialDate'));
-
-        //develop view hasil form
-        // return view('form.hasil', compact('request'), compact('officialDate'));
+    
     }
+
 
     // cetak pdf
 
     public function cetakPDF()
     {   
         $officialDate = Carbon::now()->toDateString();
-
         $request = DB::table('clients')->latest('created_at')->first();
-
         $pdf = PDF::loadView('cetak', compact('request'), compact('officialDate'));
         return $pdf->download('lampiran.pdf');
     }
-
-
-    // tampilan hasil form client
-
-    // public function hasil(Request $request){
-    //     return view('form.hasil', ['request' => $request]);
-    // }    
 
     /**
      * Display the specified resource.
@@ -231,8 +180,6 @@ class Form extends Controller
      */
     public function update(Request $request, Client $client)
     {
-        //
-
         // Timezone jakarta
         date_default_timezone_set("Asia/Jakarta");
         $jkt = date("d/m/Y H:i:s");
@@ -276,9 +223,11 @@ class Form extends Controller
      * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
+
+    // Delete data
+
     public function destroy(Client $client)
     {
-        //
         $nama = $client->namaPribadi;
 
         Client::destroy($client->id);
