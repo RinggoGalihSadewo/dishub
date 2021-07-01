@@ -33,8 +33,6 @@ Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 // Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@cetakPDF');
 Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 
-Route::get('/admin/daftar/kirim-notifikasi/{client}','App\Http\Controllers\MailController@index');
-
 // Route::get('/admin/daftar/kirim-notifikasi/{client}','App\Mail\SendGmail@build');
 
 
@@ -55,6 +53,9 @@ Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboard@index');
 
 //admin daftar surat pernyataan
 Route::get('/admin/daftar', 'App\Http\Controllers\Form@index');
+
+//admin kirim notifikasi gmail
+Route::get('/admin/daftar/kirim-notifikasi/{client}','App\Http\Controllers\MailController@index');
 
 //admin tambah data
 Route::get('/admin/tambah', 'App\Http\Controllers\Form@create');
