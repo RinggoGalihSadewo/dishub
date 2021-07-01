@@ -60,6 +60,7 @@ class Form extends Controller
         // validate form admin        
         $request->validate([
                 'nama' => 'required',
+                'email' => 'required',
                 'alamat' => 'required',
                 'ttl' => 'required',
                 'perusahaan' => 'required',
@@ -74,6 +75,7 @@ class Form extends Controller
         //create data
         Client::create([
             'namaPribadi' => $request->nama,
+            'email' => $request->email,
             'alamat' => $request->alamat,
             'ttl' => $request->ttl,
             'namaPerusahaan' => $request->perusahaan,
@@ -105,6 +107,7 @@ class Form extends Controller
 
         $request->validate([
             'nama' => 'required',
+            'email' => 'required',
             'alamat' => 'required',
             'ttl' => 'required',
             'perusahaan' => 'required',
@@ -118,6 +121,7 @@ class Form extends Controller
 
         Client::create([
             'namaPribadi' => $request->nama,
+            'email' => $request->email,
             'alamat' => $request->alamat,
             'ttl' => $request->ttl,
             'namaPerusahaan' => $request->perusahaan,
@@ -188,6 +192,7 @@ class Form extends Controller
 
         $request->validate([
             'nama' => 'required',
+            'email' => 'required',
             'alamat' => 'required',
             'ttl' => 'required',
             'perusahaan' => 'required',
@@ -202,6 +207,7 @@ class Form extends Controller
         Client::where('id', $client->id)
                 ->update([
                     'namaPribadi' => $request->nama,
+                    'email' => $request->email,
                     'alamat' => $request->alamat,
                     'ttl' => $request->ttl,
                     'namaPerusahaan' => $request->perusahaan,

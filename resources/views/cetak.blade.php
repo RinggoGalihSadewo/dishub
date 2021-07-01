@@ -66,6 +66,11 @@
                     <td> {{ $request->namaPribadi }}</td>
                 </tr>
                 <tr>
+                    <td>Email   </td> 
+                    <td>: </td>
+                    <td> {{ $request->email }}</td>
+                </tr>
+                <tr>
                     <td>TTL</td>
                     <td>:</td>
                     <td> {{ $request->ttl }}</td>

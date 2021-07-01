@@ -18,6 +18,7 @@ class CreateClientsTable extends Migration
             $table->string('namaPribadi');
             $table->string('alamat');
             $table->string('ttl');
+            $table->string('email');
             $table->string('namaPerusahaan');
             $table->string('trayek');
             $table->string('jmlhArmada');

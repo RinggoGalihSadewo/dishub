@@ -27,6 +27,22 @@
 
 	    </div>
 	  </div>
+
+	<div class="form-group row">
+	    <label for="email" class="col-sm-4 col-6 col-form-label">Email</label>
+	    <div class="col-sm-8 col-6">
+	      <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+	      
+	      @error('email')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
+
+	    </div>
+	  </div>	  
 	  
 	  <div class="form-group row">
 	    <label for="alamat" class="col-sm-4 col-6 col-form-label">Alamat Perusahaan</label>

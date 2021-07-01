@@ -19,6 +19,12 @@
 	        </td>
 	    </tr>
 
+	   	<tr>
+	        <td>
+	        	<b>Email:</b> {{ $client->email }}
+	        </td>
+	    </tr>
+
 	    <tr>
 	    	<td>
 	    		<b>Alamat Perusahaan:</b> {{ $client->alamat }}

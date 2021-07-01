@@ -33,7 +33,7 @@ Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 // Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@cetakPDF');
 Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 
-
+Route::get('/admin/daftar/kirim-notifikasi/{client}','App\Http\Controllers\MailController@index');
 
 // //develop view hasil form
 // Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');

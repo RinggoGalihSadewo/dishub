@@ -10,7 +10,7 @@ class Client extends Model
     // use HasFactory;
 
     //Mass Assignment
-    protected $fillable = ['namaPribadi', 'alamat', 'ttl', 'namaPerusahaan', 'trayek', 'jmlhArmada', 'platKendaraan', 'merk', 'warna', 'bahanBakar'];
+    protected $fillable = ['namaPribadi', 'email', 'alamat', 'ttl', 'namaPerusahaan', 'trayek', 'jmlhArmada', 'platKendaraan', 'merk', 'warna', 'bahanBakar'];
 
     protected $guarded = [];
 }
