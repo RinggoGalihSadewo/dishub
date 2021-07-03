@@ -1,4 +1,5 @@
 Cara Instalasi :
+- Install Xampp versi 7.4 (support domPDF)
 - cd ke projectnya
 - git bash 'composer install'
 - git bash 'php artisan migrate'
