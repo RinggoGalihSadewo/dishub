@@ -3,6 +3,7 @@ Cara Instalasi :
 - cd ke projectnya
 - git bash 'composer install'
 - git bash 'php artisan migrate'
+- git bash 'php arisan key:generate"
 - jika tidak ada file .env, kirim file .env
 - git bash 'php artisan serve'
 
