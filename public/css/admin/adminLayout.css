@@ -47,7 +47,7 @@ ul li a:hover{
     text-decoration: none;
     color: white;
 }
-nav{
+.nav{
 	/*position: fixed;*/
     grid-area: sidebar;
     background-color: #CCAC02;
@@ -59,6 +59,7 @@ nav{
     margin-top: 35px;
     /*top: 170px;*/
     box-sizing: border-box;
+    align-items: center;
 }
 a{
     text-decoration: none;
@@ -66,9 +67,9 @@ a{
 }
 #search{
     top: 1px; 
-    width: 200px; 
+    width: 390px; 
     position: absolute; 
-    right: 35px;
+    right: 45px;
 }
 #btnSearch{
     top: 0px;
@@ -89,6 +90,10 @@ table{
 /*.badge{
     width: 20px;
 }*/
+.links{
+    position: absolute;
+    right: 0px;
+}
 footer{
     grid-area: footer;
     border-top: 3px solid #CCAC02;

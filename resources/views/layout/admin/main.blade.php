@@ -41,17 +41,18 @@
 
     <!-- Sidebar -->
 
-    <nav>
-        
-        <h4>Dashboard</h4>
+    <div class="nav">
 
         <ul>
-            <li><a href="{{ url('/admin/daftar') }}"><img src="/img/file.png">  Daftar Surat Perizinan</a></li>
-            <li><a href="{{ url('/admin/tambah') }}"><img src="/img/add.png">  Tambah File</a></li>
-            <li><a href="{{ url('/logout') }}"><img src="/img/logout.png">  LOGOUT</a></li>
+            <li><a href="{{ url('/admin/daftar') }}"><!-- <img src="/img/file.png"> -->
+            <i class="fas fa-users"></i>  Daftar Surat Perizinan</a></li>
+            <li><a href="{{ url('/admin/tambah') }}"><!-- <img src="/img/add.png"> -->
+            <i class="fas fa-user-plus"></i>  Tambah File</a></li>
+            <li><a href="{{ url('/logout') }}"><!-- <img src="/img/logout.png"> -->
+            <i class="fas fa-sign-out-alt"></i>  LOGOUT</a></li>
         </ul>
 
-    </nav>
+    </div>
 
     <div class="content">
     

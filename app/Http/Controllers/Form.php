@@ -22,8 +22,11 @@ class Form extends Controller
 
     public function index()
     {
-        $clients = DB::table('clients')->paginate(5);
-        return view('admin.index', ['clients' => $clients]);
+        $clients = DB::table('clients')->simplePaginate(5);
+
+        $total = DB::table('clients')->count();
+
+        return view('admin.index', compact('clients'), compact('total'))->with('status');
     }
 
     /**
@@ -229,9 +232,13 @@ class Form extends Controller
     {
         $cari = $request->search;
 
-        $clients = Client::where('namaPribadi','like',"%".$cari."%")->paginate(10);
+        $total = DB::table('clients')->count();
 
-        return view('admin.index', compact('clients'));
+        $clients = Client::where('namaPribadi','like',"%".$cari."%")
+        ->OrWhere('namaPerusahaan','like',"%".$cari."%")
+        ->simplePaginate(5);
+
+        return view('admin.index', compact('clients'), compact('total'));
     }
 
     /**

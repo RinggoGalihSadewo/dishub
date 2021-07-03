@@ -12,7 +12,7 @@
     @csrf
 
     <div class="form-group" id="search">
-      <input type="text" class="form-control" id="search" name="search" placeholder="Masukan nama pribadi" autofocus>
+      <input type="text" class="form-control" id="search" name="search" placeholder="Masukan nama pribadi atau nama perusahaan" autofocus>
     </div>
 
     <button type="submit" class="btn text-white" id="btnSearch"><i class="fas fa-search"></i> Cari</button>
@@ -57,9 +57,9 @@
   </thead>
   <tbody>
 
-    @foreach($clients as $client)
+    @foreach($clients as $key => $client)
     <tr>
-      <th scope="row">{{ $loop->iteration }}</th>
+      <th scope="row">{{ $clients->firstItem() + $key }}</th>
       <td>{{ $client->namaPribadi }}</td>
       <td>{{ $client->namaPerusahaan }}</td>
       <td>{{ $client->trayek }}</td>
@@ -80,6 +80,12 @@
   </tbody>
 </table>
 
-{{ $clients->links() }}
+<div class="links">    
+  {{ $clients->links() }}
+</div>
+
+  <div>
+    Jumlah data: {{ $total }} 
+  </div>    
 
 @endsection
