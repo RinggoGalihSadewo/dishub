@@ -238,7 +238,7 @@ class Form extends Controller
         ->OrWhere('namaPerusahaan','like',"%".$cari."%")
         ->simplePaginate(5);
 
-        return view('admin.index', compact('clients'), compact('total'));
+        return view('admin.search', compact('clients'), compact('total'));
     }
 
     /**
