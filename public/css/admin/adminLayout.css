@@ -64,6 +64,19 @@ a{
     text-decoration: none;
     color: black;
 }
+#search{
+    top: 1px; 
+    width: 200px; 
+    position: absolute; 
+    right: 35px;
+}
+#btnSearch{
+    top: 0px;
+    background-color: #4366A3; 
+    position: absolute; 
+    right: 0px; 
+    margin-top: 0px;
+}
 .content{
     grid-area: content;
     height: auto;
@@ -71,6 +84,7 @@ a{
 }
 table{
     width: 100%;
+    margin-top: 0px;
 }
 /*.badge{
     width: 20px;

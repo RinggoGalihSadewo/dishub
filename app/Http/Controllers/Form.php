@@ -22,7 +22,7 @@ class Form extends Controller
 
     public function index()
     {
-        $clients = Client::all();
+        $clients = DB::table('clients')->paginate(5);
         return view('admin.index', ['clients' => $clients]);
     }
 
@@ -221,6 +221,17 @@ class Form extends Controller
 
         return redirect('/admin/daftar')->with('statusEdit', 'Data dengan nama '. $nama . ' Berhasil di ubah!');
 
+    }
+
+    // cari data
+
+    public function search(Client $client, Request $request)
+    {
+        $cari = $request->search;
+
+        $clients = Client::where('namaPribadi','like',"%".$cari."%")->paginate(10);
+
+        return view('admin.index', compact('clients'));
     }
 
     /**

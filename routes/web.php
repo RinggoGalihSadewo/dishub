@@ -54,6 +54,9 @@ Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboard@index');
 //admin daftar surat pernyataan
 Route::get('/admin/daftar', 'App\Http\Controllers\Form@index');
 
+//admin cari data
+Route::get('/admin/daftar/cari','App\Http\Controllers\Form@search');
+
 //admin kirim notifikasi gmail
 Route::get('/admin/daftar/kirim-notifikasi/{client}','App\Http\Controllers\MailController@index');
 

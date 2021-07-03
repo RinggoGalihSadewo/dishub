@@ -16,9 +16,7 @@ class MailController extends Controller
     	$officialDate = Carbon::now()->toDateString();
 
     	$details = [
-
-    		'title' => 'judul',
-    		'body' => 'ini bagian body',
+            
     		'date' => $officialDate,
     		'nama' => $client->namaPribadi,
     		'email' => $client->email,

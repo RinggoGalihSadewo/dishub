@@ -5,6 +5,22 @@
 
 @section('container')
 
+<div class="search">
+
+  <form method="GET" action="/admin/daftar/cari" class="form-inline">
+    
+    @csrf
+
+    <div class="form-group" id="search">
+      <input type="text" class="form-control" id="search" name="search" placeholder="Masukan nama pribadi" autofocus>
+    </div>
+
+    <button type="submit" class="btn text-white" id="btnSearch"><i class="fas fa-search"></i> Cari</button>
+
+  </form>
+
+</div>
+
 @if (session('status'))
     <div class="alert alert-success">
         <i class="fas fa-user-plus"></i> {{ session('status') }}
@@ -63,5 +79,7 @@
 
   </tbody>
 </table>
+
+{{ $clients->links() }}
 
 @endsection
