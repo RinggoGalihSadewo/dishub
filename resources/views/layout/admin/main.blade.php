@@ -36,7 +36,7 @@
         <div class="h1">
             <h1>WEBSITE PERIZINAN TRAYEK TRANSPORTASI DARAT</h1>
         </div>
-        <img src="{{ asset('img/profil.png') }}" style="margin-left: 35px;" width="90px" height="90px">
+        <img src="{{ asset('img/profil.png') }}" style="margin-left: 35px;" width="90px" height="90px" class="logo3">
     </header>
 
     <!-- Sidebar -->
@@ -69,13 +69,13 @@
         </div>
         <div class="f2">
             <div>
-                <p style="color:#FFFFFF"><img src="/img/location.png" width="20" height="20">     Jl.Cut Mutiah No.76 Teluk Betung Bandar Lampung</p>
+                <p style="color:#FFFFFF"><img src="/img/location.png" width="20" height="20" class="logoFooter">     Jl.Cut Mutiah No.76 Teluk Betung Bandar Lampung</p>
             </div>
-            <div style="margin-right: 120px;">
-                <p style="color:#FFFFFF"><img src="/img/telp.png" width="20" height="20">     (0721) 470209</p>
+            <div class="f2p">
+                <p style="color:#FFFFFF"><img src="/img/telp.png" width="20" height="20" class="logoFooter">     (0721) 470209</p>
             </div>
             <div>
-                <p style="color:#FFFFFF"><img src="/img/mail.png" width="20" height="20">     dishubprovlampung@gmail.com</p>
+                <p style="color:#FFFFFF"><img src="/img/mail.png" width="20" height="20" class="logoFooter">     dishubprovlampung@gmail.com</p>
             </div>
         </div>
         <div class="f3">

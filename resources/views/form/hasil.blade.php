@@ -109,13 +109,20 @@
 			<p style="text-align: justify;">
 			Bersama ini kami mengajukan permohonan izin Trayek / Izin Operasi dengan melampirkan persyaratan sesuai ketentuan Demikian Surat Permohonan ini telah di isi dengan sebenarnya dan apabila di kemudian hari ternyata keterangan - keterangan tersebut tidak benar, maka kami bersedia menerima sanksi / di tuntut sesuai dengan peraturan perundang - undangan yang berlaku
 			</p>
+            <br><br>
 		</div>
+
+        <br><br>
 
 		<div class="paraf">
 			<b>Pemohon</b>
 			<br>
 			<br>
 			<b>(Materai 6000)</b>
+            <br>
+            <br>
+            <br>
+            <b><u>{{ $request->nama }}</u></b>
 		</div>
 	</div>
 		    	

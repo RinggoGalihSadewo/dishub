@@ -143,14 +143,15 @@ footer .f3{
     margin-top: 100px;
 }
 .paraf{
-    margin-top: -40px;
+    margin-top: 0px;
     position: absolute;
     right: 0px;
     font-size: 12px;
     padding: 60px;
     bottom: 0px;
+    text-align: center;
 }
-@media (max-width: 576px){
+/*@media (max-width: 576px){
     .wrapper{
         text-align: center;
     }
@@ -183,4 +184,4 @@ footer .f3{
         margin-top: 0;
     }
 
-}        
+} */       
