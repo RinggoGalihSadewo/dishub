@@ -48,7 +48,7 @@
     <nav>
         <a href="{{url('/')}}" style="padding-right: 30px;">Beranda</a>
         <a href="{{url('/petunjuk-form')}}" style="padding-right: 30px;">Petunjuk Pengisian Form</a>
-        <a href="{{url('/pengisian-form')}}" style="padding-right: 30px;">Pengisian form</a>
+        <a href="{{url('/pengisian-form')}}" style="padding-right: 30px;">Pengisian Form</a>
     </nav>
 
 
@@ -63,10 +63,10 @@
             <p style="color:#FFFFFF">INFORMASI DAN BANTUAN TEKNIS</p>
         </div>
         <div class="f2">
-            <div>
+            <div >
                 <p style="color:#FFFFFF"><img src="/img/location.png" width="20" height="20">     Jl.Cut Mutiah No.76 Teluk Betung Bandar Lampung</p>
             </div>
-            <div style="margin-right: 120px;">
+            <div class="f2p"    >
                 <p style="color:#FFFFFF"><img src="/img/telp.png" width="20" height="20">     (0721) 470209</p>
             </div>
             <div>

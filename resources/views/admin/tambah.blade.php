@@ -13,7 +13,7 @@
 	  @csrf
 
 	  <div class="form-group row">
-	    <label for="nama" class="col-sm-4 col-6 col-form-label">Nama Pribadi</label>
+	    <label for="nama" class="col-sm-4 col-12 col-form-label">Nama Pribadi</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" value="{{ old('nama') }}">
 	      
@@ -29,7 +29,7 @@
 	  </div>
 
 	<div class="form-group row">
-	    <label for="email" class="col-sm-4 col-6 col-form-label">Email</label>
+	    <label for="email" class="col-sm-4 col-12 col-form-label">Email</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
 	      
@@ -45,7 +45,7 @@
 	  </div>	  
 	  
 	  <div class="form-group row">
-	    <label for="alamat" class="col-sm-4 col-6 col-form-label">Alamat Perusahaan</label>
+	    <label for="alamat" class="col-sm-4 col-12 col-form-label">Alamat Perusahaan</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" name="alamat" value="{{ old('alamat') }}">
 
@@ -61,7 +61,7 @@
 
 
 	  <div class="form-group row">
-	    <label for="ttl" class="col-sm-4 col-6 col-form-label">TTL</label>
+	    <label for="ttl" class="col-sm-4 col-12 col-form-label">TTL</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('ttl') is-invalid @enderror" id="ttl" name="ttl" value="{{ old('ttl') }}">
 
@@ -77,7 +77,7 @@
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="namaPerusahaan" class="col-sm-4 col-6 col-form-label">Nama Perusahaan</label>
+	    <label for="namaPerusahaan" class="col-sm-4 col-12 col-form-label">Nama Perusahaan</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('perusahaan') is-invalid @enderror" id="namaPerusahaan" name="perusahaan" value="{{ old('perusahaan') }}">
 	   
@@ -93,7 +93,7 @@
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="trayek" class="col-sm-4 col-6 col-form-label">Trayek</label>
+	    <label for="trayek" class="col-sm-4 col-12 col-form-label">Trayek</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('trayek') is-invalid @enderror" id="trayek" name="trayek" value="{{ old('trayek') }}">
 
@@ -109,7 +109,7 @@
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="jumlahArmada" class="col-sm-4 col-6 col-form-label">Jumlah Armada</label>
+	    <label for="jumlahArmada" class="col-sm-4 col-12 col-form-label">Jumlah Armada</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('jmlArmada') is-invalid @enderror" id="jumlahArmada" name="jmlArmada" value="{{ old('jmlArmada') }}">
 
@@ -125,7 +125,7 @@
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="plat" class="col-sm-4 col-6 col-form-label">Plat Kendaraan</label>
+	    <label for="plat" class="col-sm-4 col-12 col-form-label">Plat Kendaraan</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('plat') is-invalid @enderror" id="plat" name="plat" value="{{ old('plat') }}">
 
@@ -141,7 +141,7 @@
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="merk" class="col-sm-4 col-6 col-form-label">Merk Kendaraan</label>
+	    <label for="merk" class="col-sm-4 col-12 col-form-label">Merk Kendaraan</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('merk') is-invalid @enderror" id="merk" name="merk" value="{{ old('merk') }}">
 
@@ -157,7 +157,7 @@
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="warna" class="col-sm-4 col-6 col-form-label">Warna Kendaraan</label>
+	    <label for="warna" class="col-sm-4 col-12 col-form-label">Warna Kendaraan</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('warna') is-invalid @enderror" id="warna" name="warna" value="{{ old('warna') }}">
 
@@ -173,7 +173,7 @@
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="bahanBakar" class="col-sm-4 col-6 col-form-label">Bahan Bakar</label>
+	    <label for="bahanBakar" class="col-sm-4 col-12 col-form-label">Bahan Bakar</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('bahanBakar') is-invalid @enderror" id="bahanBakar" name="bahanBakar" value="{{ old('bahanBakar') }}">
 

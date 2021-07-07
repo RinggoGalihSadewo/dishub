@@ -11,7 +11,7 @@
 	@endif
 
 	<center>
-	<a href="/pengisian-form/hasil/cetakPDF" class="btn" style="background-color: #CCAC02; color: white"><i class="fas fa-print"></i>  Cetak PDF</a>
+	<a href="/pengisian-form/hasil/cetakPDF" class="btn" style="background-color: #CCAC02; color: white"><i class="fas fa-print"></i>  Download Hasil Surat Izin Trayek</a>
 	</center>
 
 	<div class="hasil">

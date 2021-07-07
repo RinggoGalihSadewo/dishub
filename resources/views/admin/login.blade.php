@@ -25,10 +25,10 @@
 
         <center>
         <div class="form-group">
-            <input type="text" style="border-color: #ccac02; width: 300px;" class="form-control" name="username" placeholder="Username">
+            <input type="text" style="border-color: #ccac02;" class="form-control login" name="username" placeholder="Username">
         </div>
         <div class="form-group">
-            <input type="password" style="border-color: #ccac02; width: 300px;"class="form-control" name="password" placeholder="Password">
+            <input type="password" style="border-color: #ccac02;"class="form-control login" name="password" placeholder="Password">
         </div>
         </center>
         <button type="submit" class="btn" style="background-color: #ccac02; color: black; border-radius: 5px; width: 150px;"><b>LOGIN</b></button>

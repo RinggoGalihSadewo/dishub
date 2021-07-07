@@ -1,10 +1,15 @@
-
-
 *{
     font-family: arial, Sans-serif;
     padding: 0;
     margin: 0; 
     /*background-color: #4366A3;*/
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 .wrapper{
     width: 100%;
@@ -18,25 +23,29 @@
     align-items: center;
     color: white;   
     border-bottom: 3px solid #CCAC02;
+    padding: 20px;
 }
 .header h1{
     /* margin-left: 40px; */
     font-style: normal;
-    font-size: 30px;
+    font-size: 15px;
+    text-align: center;
     
 }
 .logo1{
-    margin-right: 15px;
+    width: 70px;
+    height: 70px;
 }
 .logo2{
-    margin-left: 15px;
+    width: 70px;
+    height: 70px;
 }
 a{
     text-decoration: none;
     color: black;
 }
 nav{
-    padding-right: 20px;
+    padding-right: 30px;
     padding-left: 20px; 
     margin-left: 0px;
     width: 100%;
@@ -44,7 +53,8 @@ nav{
     background-color: white;
     display: flex;
     align-items: center;
-
+    margin: 0 auto;
+    font-size: 12px;        
 }
 nav a{
     transition: 0.2s;
@@ -69,7 +79,10 @@ a .beranda{
     text-align: center;
     color: black;
 }
-.penjelasan{
+.slider{
+    margin-top: -1px;
+}
+/*.penjelasan{
     width: 100%;
     height: 341px;
     background-color: #4366A3;
@@ -82,40 +95,74 @@ a .beranda{
     border-top: 3px solid #CCAC02;
     border-bottom: 3px solid #CCAC02;
     margin-top: 50px; 
-}
+}*/
 footer{
     border-top: 3px solid #CCAC02;
     margin-top: 50px;
     width: 100%;
-    height: 225px;
+    height: auto;
+    padding: 20px;
     background-color: #000000;
+}
+footer .f2 img{
+    width: 15px;
+    height: 15px;
 }
 footer .f1{
     text-align: center; 
     margin-top: 15px;
-    font-size: 24px;
+    font-size: 20px;
 }
 footer .f2{
     margin-top: 25px;
-    display: flex;
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
+    font-size: 10px;
+    text-align: center;
+}
+footer .f2 .f2p{
+    margin-right: 0px;
 }
 footer .f3{
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 23px;
     color: white;
 }
 
+.penjelasan{
+    width: 100%;
+    height: auto;
+    background-color: #4366A3;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    padding: 20px;
+    padding-top: 30px; 
+    box-sizing: border-box;
+    border-top: 3px solid #CCAC02;
+    border-bottom: 3px solid #CCAC02;
+    margin-top: 50px; 
+}
+
 /*CSS Hasil Form*/
 .hasil{
-    width: 651px;
+    width: 100%;
     height: 900px;
     border: 1px solid black;
     margin: 20px auto;
     position: relative;
+    overflow-y: auto; 
+    box-shadow: 3px 3px 10px gray;
+    transition: 0.3s;
+}
+.hasil:hover{
+    box-shadow: 5px 5px 10px gray;
+    animation-name: downtoUp;
+    transition: 0.3s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 .headerHasil{
     display: flex;
@@ -128,10 +175,8 @@ footer .f3{
 }
 .lampiran{
     height: auto;
-    position: absolute;
-    right: 0px;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 60px;
     font-size: 12px;
     border-bottom: 1px
 }
@@ -140,18 +185,220 @@ footer .f3{
     padding: 60px;
     font-size: 12px;
     position: absolute;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 .paraf{
-    margin-top: 0px;
-    position: absolute;
+/*    position: absolute;
     right: 0px;
     font-size: 12px;
     padding: 60px;
-    bottom: 0px;
-    text-align: center;
+    bottom: 50%;
+    text-align: center;*/
+    display: none;
 }
-/*@media (max-width: 576px){
+
+@keyframes downtoUp{
+  from {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+  75%{
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@media (min-width: 992px){
+
+    *{
+        font-family: arial, Sans-serif;
+        padding: 0;
+        margin: 0; 
+        /*background-color: #4366A3;*/
+    }
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .header{
+        background-color: #4366A3;
+        width: 100%;
+        height: 135px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;   
+        border-bottom: 3px solid #CCAC02;
+    }
+    .header h1{
+        /* margin-left: 40px; */
+        font-style: normal;
+        font-size: 30px;
+        text-align: center;
+    }
+    .logo1{
+        margin-right: 20px;
+        width: 120px;
+        height: 111px;
+    }
+    .logo2{
+        margin-left: 10px;
+        width: 120px;
+        height: 111px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    nav{
+        padding-right: 20px;
+        padding-left: 20px; 
+        margin-left: 0px;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+    }
+    nav a{
+        transition: 0.2s;
+    }
+    nav a:hover{
+        background-color: #CCAC02;
+        text-decoration: none;
+        color: white;
+        height: 50px;
+        box-sizing: border-box;
+        transition: 0.4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px; 
+    }
+    a .beranda{
+        background-color: #799664;
+        width: 150px;
+        height: 150px;
+        border-radius: 15px;
+        text-align: center;
+        color: black;
+    }
+    .penjelasan{
+        width: 100%;
+        height: 341px;
+        background-color: #4366A3;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        padding-top: 30px; 
+        box-sizing: border-box;
+        border-top: 3px solid #CCAC02;
+        border-bottom: 3px solid #CCAC02;
+        margin-top: 50px; 
+    }
+    footer{
+        border-top: 3px solid #CCAC02;
+        margin-top: 50px;
+        width: 100%;
+        height: 300px;
+        background-color: #000000;
+        padding: 20px;
+    }
+    footer .f1{
+        text-align: center; 
+        margin-top: 15px;
+        font-size: 24px;
+    }
+    footer .f2{
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 16px;
+    }
+    footer .f2 .f2p{
+        margin-right: 150px;
+        font-size: 14px;
+    }
+    footer .f3{
+        text-align: center;
+        font-size: 18px;
+        margin-top: 23px;
+        color: white;
+    }
+
+    /*CSS Hasil Form*/
+    .hasil{
+        width: 651px;
+        height: 900px;
+        border: 1px solid black;
+        margin: 20px auto;
+        position: relative;
+        transition: 0.3s; 
+    }
+
+    .hasil:hover{
+        animation-name: downtoUp;
+        transition: 0.3s;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        box-shadow: 3px 3px 10px gray;
+    }
+    .headerHasil{
+        display: flex;
+        height: auto;
+        border-bottom: 1px solid black;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .lampiran{
+        height: auto;
+        position: absolute;
+        right: 0px;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 12px;
+        border-bottom: 1px
+    }
+    .isiLampiran{
+        height: auto;
+        padding: 60px;
+        font-size: 12px;
+        position: absolute;
+        margin-top: 100px;
+    }
+    .paraf{
+        position: absolute;
+        right: 0px;
+        font-size: 12px;
+        padding: 60px;
+        bottom: -100px;
+        text-align: center;
+        display: inline-block;
+    }
+
+}
+
+
+
+
+/*@media (min-width: 992px){
     .wrapper{
         text-align: center;
     }
@@ -162,9 +409,6 @@ footer .f3{
     .header .logo img{
         width: 90px;
         height: 90px;
-    }
-    .formulir{
-        background-color: red;
     }
     nav{
         display: flex;
