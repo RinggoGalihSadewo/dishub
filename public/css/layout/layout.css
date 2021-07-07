@@ -188,13 +188,13 @@ footer .f3{
     margin-top: 0px;
 }
 .paraf{
-/*    position: absolute;
+    position: absolute;
     right: 0px;
     font-size: 12px;
     padding: 60px;
-    bottom: 50%;
-    text-align: center;*/
-    display: none;
+    bottom: -40%;
+    text-align: center;
+    /*display: none;*/
 }
 
 @keyframes downtoUp{
