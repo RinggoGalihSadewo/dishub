@@ -35,6 +35,9 @@
             <center>
             <img src="{{ storage_path('app/public/KOP.png') }}" class="logo1" >
 
+            <!-- Untuk hosting -->
+            <!-- <img src="{{ asset('img/KOP.PNG') }}" class="logo1"> -->
+
             <!-- <h2>Surat Permohonan Perizinan Trayek Transportasi Darat</h2> -->
 <!-- 
             <img src="{{ storage_path('app/public/logo2.png') }}" width="80px" height="80px" class="logo2"> -->

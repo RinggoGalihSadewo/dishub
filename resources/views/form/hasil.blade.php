@@ -20,6 +20,9 @@
 		
 		<img src="{{ asset('img/KOP.png') }}">
 
+        <!-- Untuk hosting -->
+        <!-- <img src="/img/KOP.PNG" width="640px" height="118px"> -->
+
 		</center>
 
 		<br>
