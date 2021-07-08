@@ -48,38 +48,38 @@ Route::get('/login', 'App\Http\Controllers\Auth@index');
 
 Route::group(['middleware' => 'CekLogin'], function() {
 
-//admin dashboard
-Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboard@index');
+	//admin dashboard
+	Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboard@index');
 
-//admin daftar surat pernyataan
-Route::get('/admin/daftar', 'App\Http\Controllers\Form@index');
+	//admin daftar surat pernyataan
+	Route::get('/admin/daftar', 'App\Http\Controllers\Form@index');
 
-//admin cari data
-Route::get('/admin/daftar/cari','App\Http\Controllers\Form@search');
+	//admin cari data
+	Route::get('/admin/daftar/cari','App\Http\Controllers\Form@search');
 
-//admin kirim notifikasi gmail
-Route::get('/admin/daftar/kirim-notifikasi/{client}','App\Http\Controllers\MailController@index');
+	//admin kirim notifikasi gmail
+	Route::get('/admin/daftar/kirim-notifikasi/{client}','App\Http\Controllers\MailController@index');
 
-//admin tambah data
-Route::get('/admin/tambah', 'App\Http\Controllers\Form@create');
+	//admin tambah data
+	Route::get('/admin/tambah', 'App\Http\Controllers\Form@create');
 
-//admin detail
-Route::get('/admin/daftar/detail/{client}', 'App\Http\Controllers\Form@show');
+	//admin detail
+	Route::get('/admin/daftar/detail/{client}', 'App\Http\Controllers\Form@show');
 
-//admin tambah data
-Route::post('/admin/daftar', 'App\Http\Controllers\Form@store');
+	//admin tambah data
+	Route::post('/admin/daftar', 'App\Http\Controllers\Form@store');
 
-//admin edit
-Route::get('/admin/daftar/edit/{client}','App\Http\Controllers\Form@edit');
+	//admin edit
+	Route::get('/admin/daftar/edit/{client}','App\Http\Controllers\Form@edit');
 
-//admin hapus
-Route::get('/admin/daftar/hapus/{client}', 'App\Http\Controllers\Form@destroy');
+	//admin hapus
+	Route::get('/admin/daftar/hapus/{client}', 'App\Http\Controllers\Form@destroy');
 
-//admin edit data
-Route::patch('/admin/daftar/{client}', 'App\Http\Controllers\form@update');
+	//admin edit data
+	Route::patch('/admin/daftar/{client}', 'App\Http\Controllers\Form@update');
 
-// admin logout
-Route::get('/logout', 'App\Http\Controllers\Auth@logout');
+	// admin logout
+	Route::get('/logout', 'App\Http\Controllers\Auth@logout');
 
 });
 
