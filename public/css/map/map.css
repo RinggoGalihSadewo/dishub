@@ -1,0 +1,32 @@
+.coordinates{
+	display: none;
+}
+
+
+
+#map{
+	/*overflow-x: scroll;*/
+}
+
+
+
+
+@media(min-width: 992px){
+
+	.coordinates{
+		background: rgba(0, 0, 0, 0.5); 
+		color: #fff;
+		padding: 5px 10px;
+		margin: 0;font-size: 11px;
+		line-height: 18px;
+		border-radius: 3px;position: absolute; 
+		bottom: 420px; 
+		left: 110px;
+		display: block;
+	}
+
+	#map{
+		/*overflow-x: hidden;*/
+	}
+
+}

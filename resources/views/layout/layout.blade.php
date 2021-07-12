@@ -15,13 +15,16 @@
     <link rel="stylesheet" type="text/css" href="/css/beranda/slider.css">
     <link rel="stylesheet" type="text/css" href="/css/layout/layout.css">
     <link rel="stylesheet" type="text/css" href="/css/guide/guide.css">
-    <link rel="stylesheet" type="text/css" href="/css/form/form.css">   
+    <link rel="stylesheet" type="text/css" href="/css/form/form.css">
+    <link rel="stylesheet" type="text/css" href="/css/map/map.css">     
 
     <!-- Faticon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/img/logo2.png">
 
     <!-- Mapbox -->
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+
 
     @livewireStyles
 
@@ -92,6 +95,10 @@
     @livewireScripts
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
 
     @stack('scripts')
 

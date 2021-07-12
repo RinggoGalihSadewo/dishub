@@ -20,7 +20,7 @@ class Form extends Controller
 
     public function index()
     {
-        $clients = DB::table('clients')->simplePaginate(5);
+        $clients = DB::table('clients')->simplePaginate(10);
 
         $total = DB::table('clients')->count();
 
@@ -176,6 +176,13 @@ class Form extends Controller
     public function edit(Client $client)
     {
         //
+
+        // $longti = Client::find('longtitude');
+
+        // Javascript::put([
+        //     'long' => $longti 
+        //     ]);        
+
         return view('admin.edit', compact('client'));
 
     }
@@ -214,6 +221,8 @@ class Form extends Controller
                     'namaPribadi' => $request->nama,
                     'email' => $request->email,
                     'alamat' => $request->alamat,
+                    'longtitude' => $request->longtitude,
+                    'lattitude' => $request->lattitude,
                     'ttl' => $request->ttl,
                     'namaPerusahaan' => $request->perusahaan,
                     'trayek' => $request->trayek,

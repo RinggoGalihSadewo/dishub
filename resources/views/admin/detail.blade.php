@@ -25,6 +25,12 @@
 	        </td>
 	    </tr>
 
+	   	<tr>
+	    	<td>
+	    		<b>Nama Perusahaan:</b> {{ $client->namaPerusahaan }}
+	    	</td>
+	    </tr>
+
 	    <tr>
 	    	<td>
 	    		<b>Alamat Perusahaan:</b> {{ $client->alamat }}
@@ -42,15 +48,16 @@
 	    	</td>
 	    </tr>
 
-		<tr>
+	    <tr>
 	    	<td>
-	    		<b>TTL:</b> {{ $client->ttl }}
+	    		<b>Alamat GPS Perusahaan:</b>
+	    		<div wire:ignore id='map' style='width: 100%; height: 300px;'></div>
 	    	</td>
 	    </tr>
 
-	    <tr>
+		<tr>
 	    	<td>
-	    		<b>Nama Perusahaan:</b> {{ $client->namaPerusahaan }}
+	    		<b>TTL:</b> {{ $client->ttl }}
 	    	</td>
 	    </tr>
 
@@ -105,5 +112,73 @@
 	  </tbody>
 	</table>
 
+@push('scripts')
+<script>
+
+	document.addEventListener('livewire:load',() => {
+
+	  var long = "{{ $client->longtitude }}";
+	  var lat = "{{ $client->lattitude }}";
+
+	  const defaultLocation = [long, lat];
+
+	  var coordinates = document.getElementById('coordinates');
+
+	  mapboxgl.accessToken = '{{env('MAPBOX_KEY')}}';
+	  var map = new mapboxgl.Map({
+	    container: 'map',
+	    center: defaultLocation,
+	    zoom: 11.15,
+	    style: 'mapbox://styles/mapbox/streets-v11'
+	  });
+
+	  map.addControl(
+		new MapboxGeocoder({
+		accessToken: mapboxgl.accessToken,
+		mapboxgl: mapboxgl
+		})
+	  );
+
+	  var coordinates = document.getElementById('coordinates');
+
+	  var marker = new mapboxgl.Marker({
+		draggable: true
+		})
+		.setLngLat(defaultLocation)
+		.addTo(map);
+		 
+		function onDragEnd() {
+		
+			var lngLat = marker.getLngLat();
+
+			document.getElementById("longtitude").value = lngLat.lng;
+	  		document.getElementById("lattitude").value = lngLat.lat;
+
+	 //  	coordinates.style.display = 'block';
+		// coordinates.innerHTML = 'Longitude: '+lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+		}
+		 
+		marker.on('dragend', onDragEnd);
+
+	});
+
+	//   map.on('click', (e) =>{
+
+	//   	const longtitude = e.lngLat.lng;
+	//   	const lattitude = e.lngLat.lat;
+
+	//   	document.getElementById("longtitude").value = longtitude;
+	//   	document.getElementById("lattitude").value = lattitude;
+
+	//  //  	var marker = new mapboxgl.Marker()
+	// 	// .setLngLat([longtitude, lattitude])
+	// 	// .addTo(map);
+	  	
+
+	// })
+
+</script>
+
+@endpush
 
 @endsection

@@ -14,8 +14,8 @@ h2{
 }
 form{
 	padding-top: 50px;
-	padding-left: 100px;
-	padding-right: 100px;
+	padding-left: 20px;
+	padding-right: 20px;
 	position: relative;
 }
 .form-control{
@@ -24,7 +24,7 @@ form{
 button{
 	margin-top: 0px;
 	position: absolute;
-	right: 100px;
+	right: 20px;
 }
 
 @media (min-width: 992px){

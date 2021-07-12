@@ -44,8 +44,24 @@
 	      @enderror
 
 	    </div>
-	  </div>	  
-	  
+	  </div>
+
+	  <div class="form-group row">
+	    <label for="namaPerusahaan" class="col-sm-4 col-12 col-form-label">Nama Perusahaan</label>
+	    <div class="col-sm-8 col-12">
+	      <input type="text" class="form-control @error('perusahaan') is-invalid @enderror" id="namaPerusahaan" name="perusahaan" value="{{ old('perusahaan') }}">
+	   
+	      @error('perusahaan')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  Data yang dimasukan tidak sesuai dengan aturan
+			</div>
+	      </div>
+	      @enderror
+
+	    </div>
+	  </div>
+	  	  
 	  <div class="form-group row">
 	    <label for="alamat" class="col-sm-4 col-12 col-form-label">Alamat Perusahaan</label>
 	    <div class="col-sm-8 col-12">
@@ -64,17 +80,25 @@
 	  <div class="form-group-row">
 	  	<div class="row">
 		  	<div class="col-md-12">
-		  		<div class="mb-3" wire:ignore id='map' style='width: 100%; height: 300px;' retur></div>
+		  		<label for="map">Alamat GPS Perusahaan (Opsional)</label>
+		  		<label for="map">
+		  			<small>*Jika nama lokasi yang dicari tidak ada, coba cari dengan berdasarkan nama jalan / nama kecamatan dan lain - lain. Cara penggunaan: Pada icon point warna biru, tekan dan arahkan icon tersebut ke tempat tujuan</small>
+		  		</label>
+		  		<div class="mb-3" wire:ignore id='map' style='width: 100%; height: 300px;'></div>
 		    </div>
 
-		    <div class="col-md-4" style="align-items: center; justify-content: center;" hidden>
+		    <div class="col-md-6 mb-3" hidden>
 		    	<label for="longtitude">Longtitude</label>
-		    	<input type="text" name="longtitude" id="longtitude" class="form-control mb-3" value="Kosong">
-
+		    	<input type="text" name="longtitude" id="longtitude" class="form-control" value="Kosong">
+		    </div>
+		    <div class="col-md-6" hidden>
 		    	<label for="lattitude">Lattitude</label>
 		    	<input type="text" name="lattitude" id="lattitude" class="form-control mb-3" value="Kosong">
 		    </div>
-
+<!-- 
+		    <div id="coordinates" class="coordinates">
+		    </div> -->
+		    
 	    </div>		
 	  </div>
 
@@ -84,22 +108,6 @@
 	      <input type="text" class="form-control @error('ttl') is-invalid @enderror" id="ttl" name="ttl" value="{{ old('ttl') }}">
 
 	      @error('ttl')
-	      <div class="invalid-feedback">
-	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
-			</div>
-	      </div>
-	      @enderror
-
-	    </div>
-	  </div>
-
-	  <div class="form-group row">
-	    <label for="namaPerusahaan" class="col-sm-4 col-12 col-form-label">Nama Perusahaan</label>
-	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('perusahaan') is-invalid @enderror" id="namaPerusahaan" name="perusahaan" value="{{ old('perusahaan') }}">
-	   
-	      @error('perusahaan')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
 			  Data yang dimasukan tidak sesuai dengan aturan
@@ -215,9 +223,11 @@
 @push('scripts')
 <script>
 
-	document.addEventListener('livewire:load', () => {
+	document.addEventListener('livewire:load',() => {
 
 	  const defaultLocation = [105.26257464716446, -5.443429907357782]
+
+	  var coordinates = document.getElementById('coordinates');
 
 	  mapboxgl.accessToken = '{{env('MAPBOX_KEY')}}';
 	  var map = new mapboxgl.Map({
@@ -227,20 +237,50 @@
 	    style: 'mapbox://styles/mapbox/streets-v11'
 	  });
 
-	  map.addControl(new mapboxgl.NavigationControl());
+	  map.addControl(
+		new MapboxGeocoder({
+		accessToken: mapboxgl.accessToken,
+		mapboxgl: mapboxgl
+		})
+	  );
 
+	  var coordinates = document.getElementById('coordinates');
 
-	  map.on('click', (e) =>{
+	  var marker = new mapboxgl.Marker({
+		draggable: true
+		})
+		.setLngLat(defaultLocation)
+		.addTo(map);
+		 
+		function onDragEnd() {
+		
+			var lngLat = marker.getLngLat();
 
-	  	const longtitude = e.lngLat.lng;
-	  	const lattitude = e.lngLat.lat;
+			document.getElementById("longtitude").value = lngLat.lng;
+	  		document.getElementById("lattitude").value = lngLat.lat;
 
-	  	document.getElementById("longtitude").value = longtitude;
-	  	document.getElementById("lattitude").value = lattitude;
+	 //  	coordinates.style.display = 'block';
+		// coordinates.innerHTML = 'Longitude: '+lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+		}
+		 
+		marker.on('dragend', onDragEnd);
+
+	});
+
+	//   map.on('click', (e) =>{
+
+	//   	const longtitude = e.lngLat.lng;
+	//   	const lattitude = e.lngLat.lat;
+
+	//   	document.getElementById("longtitude").value = longtitude;
+	//   	document.getElementById("lattitude").value = lattitude;
+
+	//  //  	var marker = new mapboxgl.Marker()
+	// 	// .setLngLat([longtitude, lattitude])
+	// 	// .addTo(map);
 	  	
-	  });
 
-	})
+	// })
 
 </script>
 @endpush
