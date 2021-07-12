@@ -2,6 +2,8 @@
 
 @section('title', 'Pengisan Form')
 
+
+
 @section('container')
 
 <div class="formulir">
@@ -59,6 +61,22 @@
 	    </div>
 	  </div>
 
+	  <div class="form-group-row">
+	  	<div class="row">
+		  	<div class="col-md-12">
+		  		<div class="mb-3" wire:ignore id='map' style='width: 100%; height: 300px;' retur></div>
+		    </div>
+
+		    <div class="col-md-4" style="align-items: center; justify-content: center;" hidden>
+		    	<label for="longtitude">Longtitude</label>
+		    	<input type="text" name="longtitude" id="longtitude" class="form-control mb-3" value="Kosong">
+
+		    	<label for="lattitude">Lattitude</label>
+		    	<input type="text" name="lattitude" id="lattitude" class="form-control mb-3" value="Kosong">
+		    </div>
+
+	    </div>		
+	  </div>
 
 	  <div class="form-group row">
 	    <label for="ttl" class="col-sm-4 col-12 col-form-label">TTL</label>
@@ -194,5 +212,39 @@
 </div>
 
 
+@push('scripts')
+<script>
+
+	document.addEventListener('livewire:load', () => {
+
+	  const defaultLocation = [105.26257464716446, -5.443429907357782]
+
+	  mapboxgl.accessToken = '{{env('MAPBOX_KEY')}}';
+	  var map = new mapboxgl.Map({
+	    container: 'map',
+	    center: defaultLocation,
+	    zoom: 11.15,
+	    style: 'mapbox://styles/mapbox/streets-v11'
+	  });
+
+	  map.addControl(new mapboxgl.NavigationControl());
+
+
+	  map.on('click', (e) =>{
+
+	  	const longtitude = e.lngLat.lng;
+	  	const lattitude = e.lngLat.lat;
+
+	  	document.getElementById("longtitude").value = longtitude;
+	  	document.getElementById("lattitude").value = lattitude;
+	  	
+	  });
+
+	})
+
+</script>
+@endpush
+
 @endsection
+
 

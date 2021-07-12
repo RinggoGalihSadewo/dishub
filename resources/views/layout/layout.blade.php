@@ -7,7 +7,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link href="{{ asset('css/beranda.css') }}" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
@@ -20,6 +19,11 @@
 
     <!-- Faticon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/img/logo2.png">
+
+    <!-- Mapbox -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+    @livewireStyles
 
     <title>@yield('title')</title>
   </head>
@@ -54,6 +58,7 @@
 
 
     @yield('container')
+    {{ isset($slot) ? $slot : null }}
 
 
     <!-- Footer -->
@@ -80,6 +85,15 @@
     </footer>
 
     </div>
+
+
+    <!-- Mapbox -->
+
+    @livewireScripts
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
+    @stack('scripts')
 
     <!-- Optional JavaScript; choose one of the two! -->
 

@@ -31,6 +31,17 @@
 	    	</td>
 	    </tr>
 
+	    <tr>
+	    	<td>
+	    		<b>Titik Koordinat Alamat Perusahaan: </b>{{ $client->lattitude }}, {{ $client->longtitude }}
+	    		
+	    		<div>
+	    		<b>	Tempat Pengecekan Titik Koordinat:</b> 
+	    			<a href="https://maps.google.com" style="color: blue; font-style: underline;" target="_blank"> https://maps.google.com</a>
+	    		</div> 
+	    	</td>
+	    </tr>
+
 		<tr>
 	    	<td>
 	    		<b>TTL:</b> {{ $client->ttl }}

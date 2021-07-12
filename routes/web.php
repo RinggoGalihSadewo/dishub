@@ -33,6 +33,7 @@ Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 // Route::post('/pengisian-form/hasil', 'App\Http\Controllers\Form@cetakPDF');
 Route::get('/pengisian-form/hasil', 'App\Http\Controllers\Form@storeClient');
 
+Route::get('/pengisian-form', 'App\Http\Livewire\Map@index');
 // Route::get('/admin/daftar/kirim-notifikasi/{client}','App\Mail\SendGmail@build');
 
 
