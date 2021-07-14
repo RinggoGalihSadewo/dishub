@@ -49,7 +49,7 @@
 
 	    		@if($client->lattitude == "-5.443429907357782" && $client->longtitude == "105.26257464716446")
 
-	    			Tidak mengisi titik koordinat
+	    			Tidak mengisi titik koordinat ( titik default berada di Bandar Lampung )
 
 	    		@else
 
