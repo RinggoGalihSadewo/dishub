@@ -17,7 +17,7 @@
 	<table border="0" cellspacing="0">
 		<br><br>
         <tr>
-            <td>Nama   </td> 
+            <td>Nama Pemilik   </td> 
             <td>: </td>
             <td> {{ $details['nama'] }}</td>
         </tr>
@@ -27,7 +27,7 @@
             <td> {{ $details['email'] }}</td>
         </tr>
         <tr>
-            <td>TTL</td>
+            <td>Tempat dan Tanggal Lahir</td>
             <td>:</td>
             <td> {{ $details['ttl'] }}</td>
         <tr>
@@ -52,34 +52,14 @@
             <td>{{ $details['alamat'] }}</td>
         </tr>
         <tr>
-            <td>Trayek</td>
-            <td>: </td>
-            <td>{{ $details['trayek'] }}</td>
-        </tr>
-        <tr>
-            <td>Jumlah Armada</td>
+            <td>Jumlah Mobil</td>
             <td>: </td>
             <td>{{ $details['jmlArmada'] }}</td>
         </tr>
         <tr>
-            <td>Plat Kendaraan</td>
+            <td>Trayek</td>
             <td>: </td>
-            <td>{{ $details['plat'] }}</td>
-        </tr>
-        <tr>
-            <td>Merk Kendaraan</td>
-            <td>: </td>
-            <td>{{ $details['merk'] }}</td>
-        </tr>
-        <tr>
-            <td>Warna Kendaraan</td>
-            <td>: </td>
-            <td>{{ $details['warna'] }}</td>
-        </tr>
-        <tr>
-            <td>Bahan Bakar</td>
-            <td>: </td>
-            <td>{{ $details['bahanBakar'] }}</td>
+            <td>{{ $details['trayek'] }}</td>
         </tr>
         <tr>
             <td>Waktu Pembuatan Surat</td>

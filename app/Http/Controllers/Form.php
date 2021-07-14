@@ -60,18 +60,33 @@ class Form extends Controller
 
         // validate form admin        
         $request->validate([
-                'nama' => 'required',
-                'email' => 'required',
-                'alamat' => 'required',
-                'ttl' => 'required',
-                'perusahaan' => 'required',
-                'trayek' => 'required',
-                'jmlArmada' => 'required',
-                'plat' => 'required',
-                'merk' => 'required',
-                'warna' => 'required',
-                'bahanBakar' => 'required'
-            ]);
+            'nama' => 'required',
+            'email' => 'required|email',
+            'alamat' => 'required',
+            'ttl' => 'required',
+            'perusahaan' => 'required',
+            'trayek' => 'required',
+            'jmlArmada' => 'required|numeric',
+            // 'plat' => 'required',
+            // 'merk' => 'required',
+            // 'warna' => 'required',
+            // 'bahanBakar' => 'required',
+        ],
+        [
+            'nama.required' => 'Nama wajib di isi',
+            'email.required' => 'Email wajib di isi',
+            'email.email' => 'Masukan kata sebelum dan sesudah simbol @',
+            'alamat.required'=> 'Alamat wajib di isi',
+            'ttl.required' => 'Tempat dan Tanggal Lahir wajib di isi',
+            'perusahaan.required' => 'Nama perusahaan wajib di isi',
+            'trayek.required' => 'Rute Trayek wajib di isi',
+            'jmlArmada.required' => 'Jumlah Mobil wajib di isi',
+            'jmlArmada.numeric' => 'Harap masukan angka',
+            // 'plat.required' => 'Plat Kendaraan wajib di isi',
+            // 'merk.required' => 'Merk wajib di isi',
+            // 'warna.required' => 'Warna wajib di isi',
+            // 'bahanBakar.required' => 'Bahan bakar wajib di isi'
+        ]);
         
         //create data
         Client::create([
@@ -84,10 +99,10 @@ class Form extends Controller
             'namaPerusahaan' => $request->perusahaan,
             'trayek' => $request->trayek,
             'jmlhArmada' => $request->jmlArmada,
-            'platKendaraan' => $request->plat,
-            'merk' => $request->merk,
-            'warna' => $request->warna,
-            'bahanBakar' => $request->bahanBakar,
+            // 'platKendaraan' => $request->plat,
+            // 'merk' => $request->merk,
+            // 'warna' => $request->warna,
+            // 'bahanBakar' => $request->bahanBakar,
             'created_at' => $jkt,
             'updated_at' => $jkt
         ]);
@@ -108,19 +123,39 @@ class Form extends Controller
         date_default_timezone_set("Asia/Jakarta");
         $jkt = date("d/m/Y H:i:s");
 
+
+
         $request->validate([
             'nama' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'alamat' => 'required',
             'ttl' => 'required',
             'perusahaan' => 'required',
             'trayek' => 'required',
-            'jmlArmada' => 'required',
-            'plat' => 'required',
-            'merk' => 'required',
-            'warna' => 'required',
-            'bahanBakar' => 'required'
+            'jmlArmada' => 'required|numeric',
+            // 'plat' => 'required',
+            // 'merk' => 'required',
+            // 'warna' => 'required',
+            // 'bahanBakar' => 'required',
+        ],
+        [
+            'nama.required' => 'Nama wajib di isi',
+            'email.required' => 'Email wajib di isi',
+            'email.email' => 'Masukan kata sebelum dan sesudah simbol @',
+            'alamat.required'=> 'Alamat wajib di isi',
+            'ttl.required' => 'Tempat dan Tanggal Lahir wajib di isi',
+            'perusahaan.required' => 'Nama perusahaan wajib di isi',
+            'trayek.required' => 'Rute Trayek wajib di isi',
+            'jmlArmada.required' => 'Jumlah Mobil wajib di isi',
+            'jmlArmada.numeric' => 'Harap masukan angka',
+            // 'plat.required' => 'Plat Kendaraan wajib di isi',
+            // 'merk.required' => 'Merk wajib di isi',
+            // 'warna.required' => 'Warna wajib di isi',
+            // 'bahanBakar.required' => 'Bahan bakar wajib di isi'
+
         ]);
+
+
 
         Client::create([
             'namaPribadi' => $request->nama,
@@ -132,17 +167,25 @@ class Form extends Controller
             'namaPerusahaan' => $request->perusahaan,
             'trayek' => $request->trayek,
             'jmlhArmada' => $request->jmlArmada,
-            'platKendaraan' => $request->plat,
-            'merk' => $request->merk,
-            'warna' => $request->warna,
-            'bahanBakar' => $request->bahanBakar,
+            // 'platKendaraan' => $request->plat,
+            // 'merk' => $request->merk,
+            // 'warna' => $request->warna,
+            // 'bahanBakar' => $request->bahanBakar,
             'created_at' => $jkt,
             'updated_at' => $jkt
         ]);
 
-        return view('/form/hasil', ['request' => $request], compact('officialDate') )->with('status', 'Data Trayek Berhasil di Tambahkan!');
+        return view('/form/hasil', ['request' => $request], compact('officialDate'))->with('status', 'Data Trayek Berhasil di Tambahkan!');
     
     }
+
+    // public function messages(){
+
+    // return [
+    //     'nama.required' => 'Nama wajib di isi',
+    //     'body.required' => 'A message is required',
+    // ];
+    // }
 
 
     // cetak pdf
@@ -204,16 +247,31 @@ class Form extends Controller
 
         $request->validate([
             'nama' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'alamat' => 'required',
             'ttl' => 'required',
             'perusahaan' => 'required',
             'trayek' => 'required',
-            'jmlArmada' => 'required',
-            'plat' => 'required',
-            'merk' => 'required',
-            'warna' => 'required',
-            'bahanBakar' => 'required'
+            'jmlArmada' => 'required|numeric',
+            // 'plat' => 'required',
+            // 'merk' => 'required',
+            // 'warna' => 'required',
+            // 'bahanBakar' => 'required',
+        ],
+        [
+            'nama.required' => 'Nama wajib di isi',
+            'email.required' => 'Email wajib di isi',
+            'email.email' => 'Masukan kata sebelum dan sesudah simbol @',
+            'alamat.required'=> 'Alamat wajib di isi',
+            'ttl.required' => 'Tempat dan Tanggal Lahir wajib di isi',
+            'perusahaan.required' => 'Nama perusahaan wajib di isi',
+            'trayek.required' => 'Rute Trayek wajib di isi',
+            'jmlArmada.required' => 'Jumlah Mobil wajib di isi',
+            'jmlArmada.numeric' => 'Harap masukan angka',
+            // 'plat.required' => 'Plat Kendaraan wajib di isi',
+            // 'merk.required' => 'Merk wajib di isi',
+            // 'warna.required' => 'Warna wajib di isi',
+            // 'bahanBakar.required' => 'Bahan bakar wajib di isi'
         ]);
 
         Client::where('id', $client->id)
@@ -227,10 +285,10 @@ class Form extends Controller
                     'namaPerusahaan' => $request->perusahaan,
                     'trayek' => $request->trayek,
                     'jmlhArmada' => $request->jmlArmada,
-                    'platKendaraan' => $request->plat,
-                    'merk' => $request->merk,
-                    'warna' => $request->warna,
-                    'bahanBakar' => $request->bahanBakar,
+                    // 'platKendaraan' => $request->plat,
+                    // 'merk' => $request->merk,
+                    // 'warna' => $request->warna,
+                    // 'bahanBakar' => $request->bahanBakar,
                 ]);
 
         return redirect('/admin/daftar')->with('statusEdit', 'Data dengan nama '. $nama . ' Berhasil di ubah!');
@@ -247,7 +305,7 @@ class Form extends Controller
 
         $clients = Client::where('namaPribadi','like',"%".$cari."%")
         ->OrWhere('namaPerusahaan','like',"%".$cari."%")
-        ->simplePaginate(5);
+        ->simplePaginate(10);
 
         return view('admin.search', compact('clients'), compact('total'));
     }

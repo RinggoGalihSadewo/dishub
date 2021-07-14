@@ -4,6 +4,8 @@
 
 @section('container')
 
+@section('container')
+
 <div class="formulir">
 	
 	<h2>FORM SURAT PERIZINAN</h2>
@@ -13,14 +15,14 @@
 	  @csrf
 
 	  <div class="form-group row">
-	    <label for="nama" class="col-sm-4 col-12 col-form-label">Nama Pribadi</label>
+	    <label for="nama" class="col-sm-4 col-12 col-form-label">Nama Pemilik</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" value="{{ old('nama') }}">
 	      
 	      @error('nama')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+	      		{{ $message }}	
 			</div>
 	      </div>
 	      @enderror
@@ -31,12 +33,28 @@
 	  <div class="form-group row">
 	    <label for="email" class="col-sm-4 col-12 col-form-label">Email</label>
 	    <div class="col-sm-8 col-12">
-	      <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+	      <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
 	      
 	      @error('email')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
+			</div>
+	      </div>
+	      @enderror
+
+	    </div>
+	  </div>
+
+	  <div class="form-group row">
+	    <label for="ttl" class="col-sm-4 col-12 col-form-label">Tempat dan Tanggal Lahir</label>
+	    <div class="col-sm-8 col-12">
+	      <input type="text" class="form-control @error('ttl') is-invalid @enderror" id="ttl" name="ttl" value="{{ old('ttl') }}">
+
+	      @error('ttl')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -52,7 +70,7 @@
 	      @error('perusahaan')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -68,7 +86,7 @@
 	      @error('alamat')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -101,14 +119,14 @@
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="ttl" class="col-sm-4 col-12 col-form-label">TTL</label>
+	    <label for="jumlahArmada" class="col-sm-4 col-12 col-form-label">Jumlah Mobil	</label>
 	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('ttl') is-invalid @enderror" id="ttl" name="ttl" value="{{ old('ttl') }}">
+	      <input type="text" class="form-control @error('jmlArmada') is-invalid @enderror" id="jumlahArmada" name="jmlArmada" value="{{ old('jmlArmada') }}">
 
-	      @error('ttl')
+		  @error('jmlArmada')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -124,7 +142,7 @@
 	      @error('trayek')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -132,23 +150,7 @@
 	    </div>
 	  </div>
 
-	  <div class="form-group row">
-	    <label for="jumlahArmada" class="col-sm-4 col-12 col-form-label">Jumlah Armada</label>
-	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('jmlArmada') is-invalid @enderror" id="jumlahArmada" name="jmlArmada" value="{{ old('jmlArmada') }}">
-
-		  @error('jmlArmada')
-	      <div class="invalid-feedback">
-	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
-			</div>
-	      </div>
-	      @enderror
-
-	    </div>
-	  </div>
-
-	  <div class="form-group row">
+<!-- 	  <div class="form-group row">
 	    <label for="plat" class="col-sm-4 col-12 col-form-label">Plat Kendaraan</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('plat') is-invalid @enderror" id="plat" name="plat" value="{{ old('plat') }}">
@@ -156,7 +158,7 @@
 	      @error('plat')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -172,7 +174,7 @@
 	      @error('merk')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -188,7 +190,7 @@
 	      @error('warna')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -204,19 +206,18 @@
 	      @error('bahanBakar')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
 	   
 	    </div>
 	  </div>
-
+ -->
 	  <button type="submit" class="btn" style="background-color: #CCAC02; color: white; margin-top: 20px;" name="submit">KIRIM</button>	  	  	  	  	  	  	  	  
 	</form>
 
 </div>
-
 
 @push('scripts')
 <script>

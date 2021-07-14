@@ -49,7 +49,7 @@
   <thead style="background-color: #4366A3;">
     <tr class="text-white">
       <th scope="col">NO</th>
-      <th scope="col">Nama Pribadi</th>
+      <th scope="col">Nama Pemilik</th>
       <th scope="col">Nama Perusahaan</th>
       <th scope="col">Trayek</th>
       <th scope="col">Aksi</th>

@@ -15,7 +15,7 @@
 
 	    <tr>
 	        <td>
-	        	<b>Nama Pribadi:</b> {{ $client->namaPribadi }}
+	        	<b>Nama Pemilik:</b> {{ $client->namaPribadi }}
 	        </td>
 	    </tr>
 
@@ -23,6 +23,12 @@
 	        <td>
 	        	<b>Email:</b> {{ $client->email }}
 	        </td>
+	    </tr>
+
+		<tr>
+	    	<td>
+	    		<b>Tempat dan Tanggal Lahir:</b> {{ $client->ttl }}
+	    	</td>
 	    </tr>
 
 	   	<tr>
@@ -39,8 +45,18 @@
 
 	    <tr>
 	    	<td>
-	    		<b>Titik Koordinat Alamat Perusahaan: </b>{{ $client->lattitude }}, {{ $client->longtitude }}
-	    		
+	    		<b>Titik Koordinat Alamat Perusahaan: </b>
+
+	    		@if($client->lattitude == "-5.443429907357782" && $client->longtitude == "105.26257464716446")
+
+	    			Tidak mengisi titik koordinat
+
+	    		@else
+
+	    			{{ $client->lattitude }}, {{ $client->longtitude }}
+
+	    		@endif
+
 	    		<div>
 	    		<b>	Tempat Pengecekan Titik Koordinat:</b> 
 	    			<a href="https://maps.google.com" style="color: blue; font-style: underline;" target="_blank"> https://maps.google.com</a>
@@ -55,9 +71,9 @@
 	    	</td>
 	    </tr>
 
-		<tr>
+	   	<tr>
 	    	<td>
-	    		<b>TTL:</b> {{ $client->ttl }}
+	    		<b>Jumlah Mobil:</b> {{ $client->jmlhArmada }}
 	    	</td>
 	    </tr>
 
@@ -67,13 +83,7 @@
 	    	</td>
 	    </tr>
 
-	    <tr>
-	    	<td>
-	    		<b>Jumlah Armada:</b> {{ $client->jmlhArmada }}
-	    	</td>
-	    </tr>
-
-	    <tr>
+<!-- 	    <tr>
 	    	<td>
 	    		<b>Plat Kendaraan:</b> {{ $client->platKendaraan }}
 	    	</td>
@@ -95,7 +105,7 @@
 	    	<td>
 	    		<b>Bahan Bakar:</b> {{ $client->bahanBakar }}
 	    	</td>
-	    </tr>
+	    </tr> -->
 
 	   	<tr>
 	    	<td>
