@@ -22,10 +22,6 @@ class CreateClientsTable extends Migration
             $table->string('namaPerusahaan');
             $table->string('trayek');
             $table->string('jmlhArmada');
-            $table->string('platKendaraan');
-            $table->string('merk');
-            $table->string('warna');
-            $table->string('bahanBakar');
             $table->timestamps();
         });
     }
