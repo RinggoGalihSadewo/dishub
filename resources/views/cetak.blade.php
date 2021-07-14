@@ -64,7 +64,7 @@
             <br><br>
             <table border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td>Nama   </td> 
+                    <td>Nama Pemilik  </td> 
                     <td>: </td>
                     <td> {{ $request->namaPribadi }}</td>
                 </tr>
@@ -74,7 +74,7 @@
                     <td> {{ $request->email }}</td>
                 </tr>
                 <tr>
-                    <td>TTL</td>
+                    <td>Tempat dan Tanggal Lahir</td>
                     <td>:</td>
                     <td> {{ $request->ttl }}</td>
                 <tr>
@@ -95,34 +95,14 @@
                     <td>{{ $request->alamat }}</td>
                 </tr>
                 <tr>
-                    <td>Trayek</td>
-                    <td>: </td>
-                    <td>{{ $request->trayek }}</td>
-                </tr>
-                <tr>
-                    <td>Jumlah Armada</td>
+                    <td>Jumlah Mobil</td>
                     <td>: </td>
                     <td>{{ $request->jmlhArmada }}</td>
                 </tr>
                 <tr>
-                    <td>Plat Kendaraan</td>
+                    <td>Trayek</td>
                     <td>: </td>
-                    <td>{{ $request->platKendaraan }}</td>
-                </tr>
-                <tr>
-                    <td>Merk Kendaraan</td>
-                    <td>: </td>
-                    <td>{{ $request->merk }}</td>
-                </tr>
-                <tr>
-                    <td>Warna Kendaraan</td>
-                    <td>: </td>
-                    <td>{{ $request->warna }}</td>
-                </tr>
-                <tr>
-                    <td>Bahan Bakar</td>
-                    <td>: </td>
-                    <td>{{ $request->bahanBakar }}</td>
+                    <td>{{ $request->trayek }}</td>
                 </tr>
             </table>
 

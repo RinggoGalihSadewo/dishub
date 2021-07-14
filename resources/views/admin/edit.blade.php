@@ -23,7 +23,7 @@
 	      @error('nama')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+	      		{{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -34,12 +34,28 @@
 	  <div class="form-group row">
 	    <label for="email" class="col-sm-4 col-12 col-form-label">Email</label>
 	    <div class="col-sm-8 col-12">
-	      <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ $client->email }}">
+	      <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ $client->email }}">
 	      
 	      @error('email')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
+			</div>
+	      </div>
+	      @enderror
+
+	    </div>
+	  </div>
+
+	  <div class="form-group row">
+	    <label for="ttl" class="col-sm-4 col-12 col-form-label">Tempat dan Tanggal Lahir</label>
+	    <div class="col-sm-8 col-12">
+	      <input type="text" class="form-control @error('ttl') is-invalid @enderror" id="ttl" name="ttl" value="{{ $client->ttl }}">
+
+	      @error('ttl')
+	      <div class="invalid-feedback">
+	      	<div class="alert alert-danger" role="alert">
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -55,7 +71,7 @@
 	      @error('perusahaan')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -71,7 +87,7 @@
 	      @error('alamat')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -104,16 +120,15 @@
 	    </div>		
 	  </div>
 
-
 	  <div class="form-group row">
-	    <label for="ttl" class="col-sm-4 col-12 col-form-label">TTL</label>
+	    <label for="jumlahArmada" class="col-sm-4 col-12 col-form-label">Jumlah Mobil</label>
 	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('ttl') is-invalid @enderror" id="ttl" name="ttl" value="{{ $client->ttl }}">
+	      <input type="text" class="form-control @error('jmlArmada') is-invalid @enderror" id="jumlahArmada" name="jmlArmada" value="{{ $client->jmlhArmada }}">
 
-	      @error('ttl')
+		  @error('jmlArmada')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -129,7 +144,7 @@
 	      @error('trayek')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -137,23 +152,9 @@
 	    </div>
 	  </div>
 
-	  <div class="form-group row">
-	    <label for="jumlahArmada" class="col-sm-4 col-12 col-form-label">Jumlah Armada</label>
-	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('jmlArmada') is-invalid @enderror" id="jumlahArmada" name="jmlArmada" value="{{ $client->jmlhArmada }}">
-
-		  @error('jmlArmada')
-	      <div class="invalid-feedback">
-	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
-			</div>
-	      </div>
-	      @enderror
-
-	    </div>
 	  </div>
 
-	  <div class="form-group row">
+<!-- 	  <div class="form-group row">
 	    <label for="plat" class="col-sm-4 col-12 col-form-label">Plat Kendaraan</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('plat') is-invalid @enderror" id="plat" name="plat" value="{{ $client->platKendaraan }}">
@@ -161,7 +162,7 @@
 	      @error('plat')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -177,7 +178,7 @@
 	      @error('merk')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -193,7 +194,7 @@
 	      @error('warna')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
@@ -209,15 +210,15 @@
 	      @error('bahanBakar')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-			  Data yang dimasukan tidak sesuai dengan aturan
+			  {{ $message }}
 			</div>
 	      </div>
 	      @enderror
 	   
 	    </div>
-	  </div>
+	  </div> -->
 
-	  <button type="submit" class="btn" style="background-color: #CCAC02; color: white; margin-top: 20px;" name="submit">SIMPAN</button>	  	  	  	  	  	  	  	  
+	  <button type="submit" class="btn" style="background-color: #CCAC02; color: white; margin-top: -100px;" name="submit">SIMPAN</button>	  	  	  	  	  	  	  	  
 	</form>
 
 </div>
