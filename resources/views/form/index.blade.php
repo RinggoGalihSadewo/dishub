@@ -84,7 +84,7 @@
 		  		<label for="map">
 		  			<small>*Jika nama lokasi yang dicari tidak ada, coba cari dengan berdasarkan nama jalan / nama kecamatan dan lain - lain. Cara penggunaan: Pada icon point warna biru, tekan dan arahkan icon tersebut ke tempat tujuan</small>
 		  		</label>
-		  		<div class="mb-3" wire:ignore id='map' style='width: 100%; height: 300px;'></div>
+		  		<div class="mb-3" wire:ignore id='map' style='width: 100%; height: 1000px;'></div>
 		    </div>
 
 		    <div class="col-md-6 mb-3" hidden>
