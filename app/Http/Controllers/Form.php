@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use PDF;
 
+use QrCode;
+
 class Form extends Controller
 {
     /**
@@ -132,7 +134,7 @@ class Form extends Controller
             'ttl' => 'required',
             'perusahaan' => 'required',
             'trayek' => 'required',
-            'jmlArmada' => 'required|numeric',
+            'jmlArmada' => 'required|numeric|not_regex:-'
             // 'plat' => 'required',
             // 'merk' => 'required',
             // 'warna' => 'required',
@@ -148,6 +150,7 @@ class Form extends Controller
             'trayek.required' => 'Rute Trayek wajib di isi',
             'jmlArmada.required' => 'Jumlah Mobil wajib di isi',
             'jmlArmada.numeric' => 'Harap masukan angka',
+            'jmlArmada.not_regex' => 'Dilarang memasukan simbol, hanya angka saja'
             // 'plat.required' => 'Plat Kendaraan wajib di isi',
             // 'merk.required' => 'Merk wajib di isi',
             // 'warna.required' => 'Warna wajib di isi',
@@ -207,7 +210,16 @@ class Form extends Controller
     public function show(Client $client)
     {
         //
-        return view('admin.detail', compact('client'));
+
+        // $data1 = Client::where('id', $client->id)->get('lattitude');
+        // $data2 = Client::where('id', $client->id)->get('longtitude');
+
+        $lat = $client->lattitude;
+        $long = $client->longtitude;
+        
+        $qr = QrCode::generate('https://www.google.com/maps/search/'.$lat.','.$long.'/@'.$lat.','.$long);
+
+        return view('admin.detail', compact('client','qr'));
     }
 
     /**

@@ -60,6 +60,10 @@
 	    		<div>
 	    		<b>	Tempat Pengecekan Titik Koordinat:</b> 
 	    			<a href="https://maps.google.com" style="color: blue; font-style: underline;" target="_blank"> https://maps.google.com</a>
+	    		</div>
+
+	    		<div class="mt-2">
+	    			{{ $qr }}
 	    		</div> 
 	    	</td>
 	    </tr>
