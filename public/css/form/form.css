@@ -27,6 +27,10 @@ button{
 	right: 20px;
 }
 
+button .btn{
+	
+}
+
 @media (min-width: 992px){
 	.formulir{
 		margin:0 auto;

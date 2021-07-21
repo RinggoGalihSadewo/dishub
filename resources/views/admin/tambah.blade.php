@@ -4,8 +4,6 @@
 
 @section('container')
 
-@section('container')
-
 <div class="formulir">
 	
 	<h2>FORM SURAT PERIZINAN</h2>

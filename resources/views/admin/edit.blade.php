@@ -16,14 +16,14 @@
 	  @csrf
 
 	  <div class="form-group row">
-	    <label for="nama" class="col-sm-4 col-12 col-form-label">Nama Pribadi</label>
+	    <label for="nama" class="col-sm-4 col-12 col-form-label">Nama Pemilik</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" value="{{ $client->namaPribadi }}">
 	      
 	      @error('nama')
 	      <div class="invalid-feedback">
 	      	<div class="alert alert-danger" role="alert">
-	      		{{ $message }}
+	      		{{ $message }}	
 			</div>
 	      </div>
 	      @enderror
@@ -61,7 +61,7 @@
 	      @enderror
 
 	    </div>
-	  </div>	  
+	  </div>
 
 	  <div class="form-group row">
 	    <label for="namaPerusahaan" class="col-sm-4 col-12 col-form-label">Nama Perusahaan</label>
@@ -78,7 +78,7 @@
 
 	    </div>
 	  </div>
-	  
+	  	  
 	  <div class="form-group row">
 	    <label for="alamat" class="col-sm-4 col-12 col-form-label">Alamat Perusahaan</label>
 	    <div class="col-sm-8 col-12">
@@ -91,7 +91,7 @@
 			</div>
 	      </div>
 	      @enderror
-	    </div>	
+	    </div>
 	  </div>
 
 	  <div class="form-group-row">
@@ -104,14 +104,13 @@
 		  		<div class="mb-3" wire:ignore id='map' style='width: 100%; height: 300px;'></div>
 		    </div>
 
-		    <div class="col-md-6 mb-3">
+		    <div class="col-md-6 mb-3" hidden>
 		    	<label for="longtitude">Longtitude</label>
-		    	<input type="text" name="longtitude" id="longtitude" class="form-control" value="{{ $client->longtitude }}" >
+		    	<input type="text" name="longtitude" id="longtitude" class="form-control" value="{{ $client->longtitude }}">
 		    </div>
-
-		    <div class="col-md-6">
+		    <div class="col-md-6" hidden>
 		    	<label for="lattitude">Lattitude</label>
-		    	<input type="text" name="lattitude" id="lattitude" class="form-control mb-3" value="{{ $client->lattitude }}" >		    
+		    	<input type="text" name="lattitude" id="lattitude" class="form-control mb-3" value="{{ $client->lattitude }}">
 		    </div>
 <!-- 
 		    <div id="coordinates" class="coordinates">
@@ -121,7 +120,7 @@
 	  </div>
 
 	  <div class="form-group row">
-	    <label for="jumlahArmada" class="col-sm-4 col-12 col-form-label">Jumlah Mobil</label>
+	    <label for="jumlahArmada" class="col-sm-4 col-12 col-form-label">Jumlah Mobil	</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('jmlArmada') is-invalid @enderror" id="jumlahArmada" name="jmlArmada" value="{{ $client->jmlhArmada }}">
 
@@ -152,12 +151,10 @@
 	    </div>
 	  </div>
 
-	  </div>
-
 <!-- 	  <div class="form-group row">
 	    <label for="plat" class="col-sm-4 col-12 col-form-label">Plat Kendaraan</label>
 	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('plat') is-invalid @enderror" id="plat" name="plat" value="{{ $client->platKendaraan }}">
+	      <input type="text" class="form-control @error('plat') is-invalid @enderror" id="plat" name="plat" value="{{ old('plat') }}">
 
 	      @error('plat')
 	      <div class="invalid-feedback">
@@ -173,7 +170,7 @@
 	  <div class="form-group row">
 	    <label for="merk" class="col-sm-4 col-12 col-form-label">Merk Kendaraan</label>
 	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('merk') is-invalid @enderror" id="merk" name="merk" value="{{ $client->merk }}">
+	      <input type="text" class="form-control @error('merk') is-invalid @enderror" id="merk" name="merk" value="{{ old('merk') }}">
 
 	      @error('merk')
 	      <div class="invalid-feedback">
@@ -189,7 +186,7 @@
 	  <div class="form-group row">
 	    <label for="warna" class="col-sm-4 col-12 col-form-label">Warna Kendaraan</label>
 	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('warna') is-invalid @enderror" id="warna" name="warna" value="{{ $client->warna }}">
+	      <input type="text" class="form-control @error('warna') is-invalid @enderror" id="warna" name="warna" value="{{ old('warna') }}">
 
 	      @error('warna')
 	      <div class="invalid-feedback">
@@ -205,7 +202,7 @@
 	  <div class="form-group row">
 	    <label for="bahanBakar" class="col-sm-4 col-12 col-form-label">Bahan Bakar</label>
 	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('bahanBakar') is-invalid @enderror" id="bahanBakar" name="bahanBakar" value="{{ $client->bahanBakar }}">
+	      <input type="text" class="form-control @error('bahanBakar') is-invalid @enderror" id="bahanBakar" name="bahanBakar" value="{{ old('bahanBakar') }}">
 
 	      @error('bahanBakar')
 	      <div class="invalid-feedback">
@@ -216,9 +213,9 @@
 	      @enderror
 	   
 	    </div>
-	  </div> -->
-
-	  <button type="submit" class="btn" style="background-color: #CCAC02; color: white; margin-top: -100px;" name="submit">SIMPAN</button>	  	  	  	  	  	  	  	  
+	  </div>
+ -->
+	  <button type="submit" class="btn" style="background-color: #CCAC02; color: white; margin-top: 20px;" name="submit">SIMPAN</button>	  	  	  	  	  	  	  	  
 	</form>
 
 </div>

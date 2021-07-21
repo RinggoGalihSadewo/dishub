@@ -113,6 +113,7 @@ class Form extends Controller
         ]);
 
         return redirect('/admin/daftar')->with('status', 'Data Trayek Berhasil di Tambahkan!');
+
     }
 
 
