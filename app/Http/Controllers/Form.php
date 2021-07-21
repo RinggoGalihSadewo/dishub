@@ -62,13 +62,13 @@ class Form extends Controller
 
         // validate form admin        
         $request->validate([
-            'nama' => 'required',
+            'nama' => 'required|not_regex:/[0-9`~!@#$%^&*()_+=->.,<?;:{}]+/',
             'email' => 'required|email',
             'alamat' => 'required',
             'ttl' => 'required',
             'perusahaan' => 'required',
             'trayek' => 'required',
-            'jmlArmada' => 'required|numeric',
+            'jmlArmada' => 'required|numeric|min:5'
             // 'plat' => 'required',
             // 'merk' => 'required',
             // 'warna' => 'required',
@@ -76,6 +76,7 @@ class Form extends Controller
         ],
         [
             'nama.required' => 'Nama wajib di isi',
+            'nama.not_regex' => 'Tidak boleh memasukan angka atau simbol',
             'email.required' => 'Email wajib di isi',
             'email.email' => 'Masukan kata sebelum dan sesudah simbol @',
             'alamat.required'=> 'Alamat wajib di isi',
@@ -84,6 +85,8 @@ class Form extends Controller
             'trayek.required' => 'Rute Trayek wajib di isi',
             'jmlArmada.required' => 'Jumlah Mobil wajib di isi',
             'jmlArmada.numeric' => 'Harap masukan angka',
+            'jmlArmada.not_regex' => 'Dilarang memasukan simbol, hanya angka saja',
+            'jmlArmada.min' => 'Jumlah mobil minimal 5'
             // 'plat.required' => 'Plat Kendaraan wajib di isi',
             // 'merk.required' => 'Merk wajib di isi',
             // 'warna.required' => 'Warna wajib di isi',
@@ -128,13 +131,13 @@ class Form extends Controller
 
 
         $request->validate([
-            'nama' => 'required',
+            'nama' => 'required|not_regex:/[0-9`~!@#$%^&*()_+=->.,<?;:{}]+/',
             'email' => 'required|email',
             'alamat' => 'required',
             'ttl' => 'required',
             'perusahaan' => 'required',
             'trayek' => 'required',
-            'jmlArmada' => 'required|numeric|not_regex:-'
+            'jmlArmada' => 'required|numeric|min:5'
             // 'plat' => 'required',
             // 'merk' => 'required',
             // 'warna' => 'required',
@@ -142,6 +145,7 @@ class Form extends Controller
         ],
         [
             'nama.required' => 'Nama wajib di isi',
+            'nama.not_regex' => 'Tidak boleh memasukan angka atau simbol',
             'email.required' => 'Email wajib di isi',
             'email.email' => 'Masukan kata sebelum dan sesudah simbol @',
             'alamat.required'=> 'Alamat wajib di isi',
@@ -150,7 +154,8 @@ class Form extends Controller
             'trayek.required' => 'Rute Trayek wajib di isi',
             'jmlArmada.required' => 'Jumlah Mobil wajib di isi',
             'jmlArmada.numeric' => 'Harap masukan angka',
-            'jmlArmada.not_regex' => 'Dilarang memasukan simbol, hanya angka saja'
+            'jmlArmada.not_regex' => 'Dilarang memasukan simbol, hanya angka saja',
+            'jmlArmada.min' => 'Jumlah mobil minimal 5'
             // 'plat.required' => 'Plat Kendaraan wajib di isi',
             // 'merk.required' => 'Merk wajib di isi',
             // 'warna.required' => 'Warna wajib di isi',
@@ -181,15 +186,6 @@ class Form extends Controller
         return view('/form/hasil', ['request' => $request], compact('officialDate'))->with('status', 'Data Trayek Berhasil di Tambahkan!');
     
     }
-
-    // public function messages(){
-
-    // return [
-    //     'nama.required' => 'Nama wajib di isi',
-    //     'body.required' => 'A message is required',
-    // ];
-    // }
-
 
     // cetak pdf
 
@@ -258,13 +254,13 @@ class Form extends Controller
         $nama = $request->nama;
 
         $request->validate([
-            'nama' => 'required',
+            'nama' => 'required|not_regex:/[0-9`~!@#$%^&*()_+=->.,<?;:{}]+/',
             'email' => 'required|email',
             'alamat' => 'required',
             'ttl' => 'required',
             'perusahaan' => 'required',
             'trayek' => 'required',
-            'jmlArmada' => 'required|numeric',
+            'jmlArmada' => 'required|numeric|min:5'
             // 'plat' => 'required',
             // 'merk' => 'required',
             // 'warna' => 'required',
@@ -272,6 +268,7 @@ class Form extends Controller
         ],
         [
             'nama.required' => 'Nama wajib di isi',
+            'nama.not_regex' => 'Tidak boleh memasukan angka atau simbol',
             'email.required' => 'Email wajib di isi',
             'email.email' => 'Masukan kata sebelum dan sesudah simbol @',
             'alamat.required'=> 'Alamat wajib di isi',
@@ -280,6 +277,8 @@ class Form extends Controller
             'trayek.required' => 'Rute Trayek wajib di isi',
             'jmlArmada.required' => 'Jumlah Mobil wajib di isi',
             'jmlArmada.numeric' => 'Harap masukan angka',
+            'jmlArmada.not_regex' => 'Dilarang memasukan simbol, hanya angka saja',
+            'jmlArmada.min' => 'Jumlah mobil minimal 5'
             // 'plat.required' => 'Plat Kendaraan wajib di isi',
             // 'merk.required' => 'Merk wajib di isi',
             // 'warna.required' => 'Warna wajib di isi',
