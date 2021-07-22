@@ -82,7 +82,7 @@
             </div>
         </div>
         <div class="f3">
-            <p>&copy; 2021 DISHUB PROVINSI LAMPUNG</p>
+            <p>&copy; IF'18 KP ITERA</p>
             <p>Pelayanan Perizinan Trayek Transportasi Darat</p>
         </div>         
     </footer>
