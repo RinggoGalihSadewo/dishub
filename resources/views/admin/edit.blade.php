@@ -135,7 +135,7 @@
 	    </div>
 	  </div>
 
-	  <div class="form-group row">
+<!-- 	  <div class="form-group row">
 	    <label for="trayek" class="col-sm-4 col-12 col-form-label">Trayek</label>
 	    <div class="col-sm-8 col-12">
 	      <input type="text" class="form-control @error('trayek') is-invalid @enderror" id="trayek" name="trayek" value="{{ $client->trayek }}">
@@ -149,72 +149,159 @@
 	      @enderror
 
 	    </div>
-	  </div>
+	  </div> -->
 
-<!-- 	  <div class="form-group row">
-	    <label for="plat" class="col-sm-4 col-12 col-form-label">Plat Kendaraan</label>
+	  	<div class="form-group row">  	
+	    <label for="trayek" class="col-sm-4 col-12 col-form-label">Trayek</label>
 	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('plat') is-invalid @enderror" id="plat" name="plat" value="{{ old('plat') }}">
+	    <select class="select form-control" id="trayek" name="trayek">
 
-	      @error('plat')
-	      <div class="invalid-feedback">
-	      	<div class="alert alert-danger" role="alert">
-			  {{ $message }}
-			</div>
-	      </div>
-	      @enderror
-	  
+	      <option selected>{{ $client->trayek }}</option>	
+	      <option disabled style="background-color: #4366A3; color: white">KOTA BANDAR LAMPUNG</option>
+	      <option>Tanjung Karang - Raja Basa (A)</option>
+	      <option>Tanjung Karang - Sukaraja (B)</option>
+	      <option>Sukaraja - Srengsem (C)</option>
+	      <option>Tanjung Karang - Garuntang (D)</option>
+	      <option>Tanjung Karang - jl. Teuku Umar (E)</option>
+	      <option>Tanjung Karang - Kemiling (F)</option>
+	      <option>Tanjung Karang - Sukarame (G)</option>
+	      <option>Tanjung Karang - Permata Biru (H)</option>
+	      <option>Tanjung Karang - Sam Ratulangi (R)</option>
+	      <option>Pasar Cimeng - Lempasing (J)</option>
+	      <option>Sukaraja - Lempasing (I)</option>
+
+	      <option disabled style="background-color: #4366A3; color: white">KOTA METRO</option>
+	      <option>Terminal Kota - Terminal Mulyojati</option>
+	      <option>Terminal Kota - Karangrejo</option>
+	      <option>Terminal Kota - Kampus - SPBU 21</option>
+	      <option>Metro - Stadion Tejosari Via Jl Alamsyah</option>
+	      <option>Mulyojati - Rejomulyo Via Jl Budi Utomo</option>
+	      <option>Mulyojati - SMA 2 Via Jl Suprapto</option>
+	      <option>Mulyojati - Metro</option>
+
+	      <option disabled style="background-color: #4366A3; color: white">KABUPATEN LAMPUNG TENGAH</option>
+	      <option>Bd Jaya - Gn Sugih - Bj Sari - Mojopahit</option>
+	      <option>Gaya Baru - Cabang</option>
+	      <option>Bd Jaya - Gn Sugih - Wates</option>
+	      <option>Bd Jaya - Poncowati - Gn Batin</option>
+	      <option>Bd Jaya - Gn Sugih - Kota Gajah</option>
+	      <option>Bd Jaya - Sulusuban</option>
+	      <option>Bd Jaya - Sp Mataram</option>
+	      <option>Bd Jaya - Komering - Padang Ratu</option>
+	      <option>Bd Jaya - Candi Rejo - Bj Ratu</option>
+	      <option>Wates - Bekri - Kalirejo</option>
+	      <option>Gotong Royong - Bj Sari - Metro</option>
+	      <option>Wates - Metro</option>
+	      <option>Trimurjo - Metro</option>
+	      <option>Kota Gajah - Punggur - Metro</option>
+	      <option>Kota Gajah - Raman Utara - Pekalongan</option>
+	      <option>Kota Gajah - Bumi Jawa - Sukadana</option>
+	      <option>Kalirejo - Sukoharjo - Pringsewu</option>
+
+	      <option disabled style="background-color: #4366A3; color: white">KABUPATEN LAMPUNG SELATAN</option>
+	      <option>Kalianda - Sidoarjo - Sidomulyo - PP</option>
+	      <option>Kalianda - Canty - Way Muli - PP</option>
+	      <option>Kalianda - Merak Belatung - Sidomulyo - PP</option>
+	      <option>Kalianda - Gayam - Bakauheni - PP</option>
+	      <option>Tegineneng - Branti - Natar - Raja Basa - PP</option>
+	      <option>Sp Sebelang - Panjang - PP</option>
+	      <option>Kalianda - Panjang - PP</option>
+	      <option>Sidomulyo - Kota Dalam - Tanjungan - PP</option>
+	      <option>Sidomulyo - Panjang - PP</option>
+
+	      <option disabled style="background-color: #4366A3; color: white">KABUPATEN LAMPUNG TIMUR</option>
+	      <option>Pekalongan - Sukadana</option>
+	      <option>Purbolinggo - Sukadana</option>
+	      <option>Way Jepara - Sukadana</option>
+	      <option>Sekampung - Sukadana</option>
+	      <option>Pekalongan - Metro</option>
+	      <option>Sekampung - Metro</option>
+	      <option>Wonosari - Purwosari - Metro</option>
+	      <option>Mulyojati - Bantul - Metro Kibang</option>
+	      <option>Purbolinggo - Pekalongan - Metro</option>
+	      <option>Raman Utara - Pekalongan - Metro</option>
+	      <option>Sukadana - Pekalongan - Metro</option>
+	      <option>Pekalongan - Simpang - Raman Utara - Kota Gajah</option>
+	      <option>Sukadana - Bumi Jawa - Kota Gajah</option>
+	      <option>Purbolinggo - Raman Utara</option>
+	      <option>Terminal Bunut - Labuhan Maringgai - Way Jepara</option>
+	      <option>Mataram Baru - Sidomulyo - Terminal Bakauheni</option>
+	      <option>Pekalongan - Metro</option>
+	      <option>Pekalongan - Raman Utara</option>
+	      <option>Pekalongan - Batanghari</option>
+	      <option>Way Jepara - Bringin</option>
+	      <option>Way Jepara - Braja Slebah</option>
+	      <option>Way Jepara - Braja Luhur</option>
+	      <option>Way Jepara - Sadar Sriwijaya</option>
+	      <option>Way Jepara - Sumur Bandung</option>
+	      <option>Raja Basa Baru - Mataram Baru - Way Jepara</option>
+	      <option>Mataram Baru - Kuala</option>
+	      <option>Mataram Baru - Way Mili</option>
+	      <option>Mataram Baru - Bunut</option>
+	      <option>Sekampung - Pugung Raharjo</option>
+	      <option>Sekampung - Batang Hari</option>
+	      <option>Sekampung - Metro</option>
+	      <option>Sekampung - Batanghari</option>
+	      <option>Sribawono - Panjang - PP</option>
+
+	      <option disabled style="background-color: #4366A3; color: white">KABUPATEN LAMPUNG BARAT</option>
+	      <option>Liwa - Way Betanding</option>
+	      <option>Liwa - Sp Liwa</option>
+	      <option>Liwa - Krui</option>
+	      <option>Liwa - Sukarame</option>
+	      <option>Liwa - Bengkunat</option>
+	      <option>Way Tenong - Batu Kebayan</option>
+	      <option>Liwa - Bakung</option>
+	      <option>Sekincau - Sb Jaya</option>
+
+	      <option disabled style="background-color: #4366A3; color: white">KABUPATEN LAMPUNG UTARA</option>
+	      <option>Sub Terminal Kota - Sub Terminal PS Sentral</option>
+	      <option>Sub Terminal Kota - Way Rarem</option>
+	      <option>Sub Terminal Kota - Kebon 1V & V</option>
+	      <option>Sub Terminal Kota - Ketapang - Negara Ratu</option>
+	      <option>Sub Terminal Kota - Tata Karya</option>
+	      <option>Sub Terminal Kota - Perumnas TI</option>
+	      <option>Simpang Taruko - Jl Hi Alamsyah RPN - Sub Terminal Kota</option>
+	      <option>Sub Terminal Kota - Sp Propau - Blamb Pagar</option>
+	      <option>Terminal PS Sentral - CV IV</option>
+	      <option>Terminal PS Sentral - Bukit Kemuning</option>
+	      <option>Terminal PS Sentral - Cabang IV</option>
+	      <option>Terminal PS Sentral - Subik</option>
+	      <option>Terminal PS Sentral - Tanjung Raja</option>
+	      <option>Sub Terminal Kota - PS Sentral - Perumnas</option>
+	      <option>Simpang Propau - Daya Murni</option>
+	      <option>Simpang Propau - Blambangan Pagar</option>
+	      <option>Simpang Propau - Way Tebabeng</option>
+	      <option>Kali Cinta - Cempaka</option>
+	      <option>Kali Cinta - Dorowati</option>
+	      <option>Kali Cinta - Bunga Mayang</option>
+	      <option>Bukit Kemuning - Tj Raja</option>
+	      <option>Sub Terminal Kota - Taruko - Perumbas - Rejosari - Sribasuki - Sub Terminal Kota</option>
+
+	      <option disabled style="background-color: #4366A3; color: white">KABUPATEN TULANG BAWANG</option>
+	      <option>Terminal Menggala - Pasar Baru PP</option>
+	      <option>Terminal Menggala - Kampung Tua</option>
+	      <option>Terminal Menggala - Unit II</option>
+
+	      <option disabled style="background-color: #4366A3; color: white">KABUPATEN WAY KANAN</option>
+	      <option disabled>Belum ada Trayek</option>
+
+	      <option disabled style="background-color: #4366A3; color: white">KABUPATEN PESAWARAN</option>
+	      <option>Kemiling- Gd Tataan</option>
+
+	      <option disabled style="background-color: #4366A3; color: white">KABUPATEN TANGGAMUS</option>
+	      <option>Kota Agung - Gisting - Talang Padang</option>
+	      <option>Kota Agung - Wonosobo</option>
+	      <option>Pringsewu - Ambarawa - Pardasuka</option>
+	      <option>Pringsewu - Sukoharjo</option>
+	      <option>Pringsewu - Pagelaran - Talang Padang</option>
+	      <option>Pringsewu - Gading Rejo</option>
+	      <option>Sukoharjo - Kalirejo</option>
+
+	    </select>
 	    </div>
-	  </div>
+	</div>
 
-	  <div class="form-group row">
-	    <label for="merk" class="col-sm-4 col-12 col-form-label">Merk Kendaraan</label>
-	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('merk') is-invalid @enderror" id="merk" name="merk" value="{{ old('merk') }}">
-
-	      @error('merk')
-	      <div class="invalid-feedback">
-	      	<div class="alert alert-danger" role="alert">
-			  {{ $message }}
-			</div>
-	      </div>
-	      @enderror
-
-	    </div>
-	  </div>
-
-	  <div class="form-group row">
-	    <label for="warna" class="col-sm-4 col-12 col-form-label">Warna Kendaraan</label>
-	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('warna') is-invalid @enderror" id="warna" name="warna" value="{{ old('warna') }}">
-
-	      @error('warna')
-	      <div class="invalid-feedback">
-	      	<div class="alert alert-danger" role="alert">
-			  {{ $message }}
-			</div>
-	      </div>
-	      @enderror
-
-	    </div>
-	  </div>
-
-	  <div class="form-group row">
-	    <label for="bahanBakar" class="col-sm-4 col-12 col-form-label">Bahan Bakar</label>
-	    <div class="col-sm-8 col-12">
-	      <input type="text" class="form-control @error('bahanBakar') is-invalid @enderror" id="bahanBakar" name="bahanBakar" value="{{ old('bahanBakar') }}">
-
-	      @error('bahanBakar')
-	      <div class="invalid-feedback">
-	      	<div class="alert alert-danger" role="alert">
-			  {{ $message }}
-			</div>
-	      </div>
-	      @enderror
-	   
-	    </div>
-	  </div>
- -->
 	  <button type="submit" class="btn" style="background-color: #CCAC02; color: white; margin-top: 20px;" name="submit">SIMPAN</button>	  	  	  	  	  	  	  	  
 	</form>
 
