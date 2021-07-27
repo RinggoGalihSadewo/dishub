@@ -6,7 +6,7 @@
 
 @section('container')
 
-<div class="formulir">
+<div class="formulir" data-aos="fade">
 	
 	<h2>FORM SURAT PERIZINAN</h2>
 
@@ -369,6 +369,10 @@
 
 @push('scripts')
 <script>
+
+    AOS.init({
+        duration: 1000,
+    })
 
 	document.addEventListener('livewire:load',() => {
 

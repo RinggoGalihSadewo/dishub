@@ -28,9 +28,13 @@
     <!-- Jquery -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css">
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     @livewireStyles
 
     <title>@yield('title')</title>
+
   </head>
   <body>
 
@@ -38,28 +42,37 @@
 
     <!-- Header -->
 
-    <header class="header">
-        <div class="logo1">
-            <img src="{{ asset('img/logo1.png') }}" width="120px" height="111px" class="logo1" >
-        </div>
-        <div class="h1">
-            <h1>WEBSITE PERIZINAN TRAYEK TRANSPORTASI DARAT</h1>
-        </div>
-        <div class="logo2">
-            <img src="{{ asset('img/logo2.png') }}" width="120px" height="111px" class="logo2">
-        </div>
-    </header>
-
-
-
-    <!-- Navbar -->
-
-    <nav>
-        <a href="{{url('/')}}" style="padding-right: 30px;">Beranda</a>
-        <a href="{{url('/petunjuk-form')}}" style="padding-right: 30px;">Petunjuk Pengisian Form</a>
-        <a href="{{url('/pengisian-form')}}" style="padding-right: 30px;">Pengisian Form</a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4366A3; border-bottom: 3px solid #CCAC02; ">
+      <a class="navbar-brand" href="#">
+        <img src="/img/logo1.png" height="40" width="40">
+        <img src="/img/logo2.png" height="40" width="40"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Beranda<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Petunjuk Pengisian Form</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Pengisian Form</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown link
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
-
 
 
     @yield('container')
@@ -91,7 +104,8 @@
 
     </div>
 
-
+   <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Mapbox -->
 
     @livewireScripts
