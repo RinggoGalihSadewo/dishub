@@ -39,7 +39,7 @@
             <img src="{{ asset('img/logo2.png') }}" width="90px" height="90px" class="logo2">
         </div>
         <div class="h1">
-            <h1>WEBSITE PERIZINAN TRAYEK TRANSPORTASI DARAT</h1>
+            <h1>ADMIN PERIZINAN TRAYEK TRANSPORTASI DARAT</h1>
         </div>
         <img src="{{ asset('img/profil.png') }}" style="margin-left: 35px;" width="90px" height="90px" class="logo3">
     </header>

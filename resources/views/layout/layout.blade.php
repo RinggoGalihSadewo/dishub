@@ -42,25 +42,27 @@
 
     <!-- Header -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4366A3; border-bottom: 3px solid #CCAC02; ">
-      <a class="navbar-brand" href="#">
-        <img src="/img/logo1.png" height="40" width="40">
-        <img src="/img/logo2.png" height="40" width="40"></a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4366A3; border-bottom: 3px solid #CCAC02; box-shadow: 0px 3px 10px gray;">
+      <a class="navbar-brand" href="{{url('/')}}">
+        <img src="/img/logo1.png" class="logo1">
+        <img src="/img/logo2.png" class="logo2">
+        <h3 class="d-md-inline d-none">Website Perizinan Trayek Transportasi Darat</h3>
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown" style="background-color: #4366A3; padding: 10px 20px 10px 20px; border-radius: 5px;">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Beranda<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{url('/')}}">Beranda<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Petunjuk Pengisian Form</a>
+            <a class="nav-link active" href="{{url('/petunjuk-form')}}">Petunjuk Pengisian Form</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Pengisian Form</a>
+            <a class="nav-link" href="{{url('/pengisian-form')}}">Pengisian Form</a>
           </li>
-          <li class="nav-item dropdown">
+<!--           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Dropdown link
             </a>
@@ -69,7 +71,7 @@
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>

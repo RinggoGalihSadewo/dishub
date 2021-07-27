@@ -6,7 +6,7 @@
 
 @section('container')
 
-<div class="guide">		
+<div class="guide" style="margin-top: 110px;">		
 	<!-- <img src="/img/guide.jpeg" width="835px" height="591px"> -->
 	<img src="/img/langkah1.png" width="300px" height="650px" class="guide1" data-aos="flip-left">
 	<img src="/img/langkah2.png" width="300px" height="650px" class="guide2" data-aos="flip-right">

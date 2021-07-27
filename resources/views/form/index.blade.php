@@ -6,7 +6,7 @@
 
 @section('container')
 
-<div class="formulir" data-aos="fade">
+<div class="formulir" data-aos="fade-right" style="margin-top: 110px;" >
 	
 	<h2>FORM SURAT PERIZINAN</h2>
 
