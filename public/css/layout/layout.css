@@ -95,7 +95,7 @@ a .beranda{
     margin-top: 50px; 
 }*/
 .parallax-window {
-    min-height: 400px;
+    min-height: 500px;
     background: transparent;
 }
 footer{
@@ -309,7 +309,7 @@ footer .f3{
         margin-top: 50px; 
     }
     .parallax-window {
-        min-height: 400px;
+        min-height: 500px;
         background: transparent;
     }
     footer{

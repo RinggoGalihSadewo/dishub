@@ -49,7 +49,7 @@
         <p>Joko Widodo, 16 Agustus 2018</p>
     </div>
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="/img/guide.jpeg" zindex="99"></div>
+    <div class="parallax-window mt-5" data-parallax="scroll" data-image-src="/img/a.jpg" ></div>
 
     <center>
     <div class="mt-5" data-aos="fade-right">
@@ -68,12 +68,17 @@
 @push('scripts')
 
 <script>
+    
+    $('.parallax-window').parallax({imageSrc: '/img/a.jpg'});
 
-    $('.parallax-window').parallax({imageSrc: '/img/guide.jpeg'});
+</script>
+
+<script>
 
     AOS.init({
         duration: 1000,
     })
+
 </script>
 
 
