@@ -49,7 +49,7 @@
         <p>Joko Widodo, 16 Agustus 2018</p>
     </div>
 
-    <div class="parallax-window mt-5" data-parallax="scroll" data-image-src="/img/a.jpg" data-speed="0"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="/img/a.jpg" data-speed="0"></div>
 
     <center>
     <div class="mt-5" data-aos="fade-right">
