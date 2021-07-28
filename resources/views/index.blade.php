@@ -49,13 +49,13 @@
         <p>Joko Widodo, 16 Agustus 2018</p>
     </div>
 
-    <div class="parallax-window mt-5" data-parallax="scroll" data-image-src="/img/a.jpg" ></div>
+    <div class="parallax-window mt-5" data-parallax="scroll" data-image-src="/img/a.jpg" data-speed="0"></div>
 
     <center>
     <div class="mt-5" data-aos="fade-right">
     <h4>Alamat GPS Dinas Perhubungan Provinsi Lampung</h4>
 
-    <div class="embed-responsive embed-responsive-16by9" style="width: 65%; height: 400px">
+    <div class="embed-responsive embed-responsive-16by9" style="width: 65%; height: 400px; z-index: -1;">
         
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.8874315927283!2d105.25341381448622!3d-5.434064155742303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40da30bd702e13%3A0x8a05d5fc73bcbbaa!2sLampung%20Provincial%20Transport%20Department!5e0!3m2!1sen!2sid!4v1624432836269!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
