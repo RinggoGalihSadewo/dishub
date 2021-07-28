@@ -94,6 +94,10 @@ a .beranda{
     border-bottom: 3px solid #CCAC02;
     margin-top: 50px; 
 }*/
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
 footer{
     border-top: 3px solid #CCAC02;
     margin-top: 50px;
@@ -303,6 +307,10 @@ footer .f3{
         border-top: 3px solid #CCAC02;
         border-bottom: 3px solid #CCAC02;
         margin-top: 50px; 
+    }
+    .parallax-window {
+        min-height: 400px;
+        background: transparent;
     }
     footer{
         border-top: 3px solid #CCAC02;

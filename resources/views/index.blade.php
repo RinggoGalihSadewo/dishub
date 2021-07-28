@@ -49,6 +49,8 @@
         <p>Joko Widodo, 16 Agustus 2018</p>
     </div>
 
+    <div class="parallax-window" data-parallax="scroll" data-image-src="/img/guide.jpeg" zindex="99"></div>
+
     <center>
     <div class="mt-5" data-aos="fade-right">
     <h4>Alamat GPS Dinas Perhubungan Provinsi Lampung</h4>
@@ -66,10 +68,15 @@
 @push('scripts')
 
 <script>
+
+    $('.parallax-window').parallax({imageSrc: '/img/guide.jpeg'});
+
     AOS.init({
         duration: 1000,
     })
 </script>
+
+
 
 @endpush
 
