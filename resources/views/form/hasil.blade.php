@@ -18,7 +18,7 @@
 
 		<center>
 		
-		<img src="{{ asset('img/KOP.png') }}">
+		<img src="{{ asset('img/KOP.PNG') }}">
 
         <!-- Untuk hosting -->
         <!-- <img src="/img/KOP.PNG" width="640px" height="118px"> -->
@@ -121,7 +121,7 @@
 			<b>Pemohon</b>
 			<br>
 			<br>
-			<b>(Materai 6000)</b>
+			<b>(Materai 10000)</b>
             <br>
             <br>
             <br>

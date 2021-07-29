@@ -33,7 +33,7 @@
     <div class="hasil">
         <div class="headerHasil">
             <center>
-            <img src="{{ storage_path('app/public/KOP.png') }}" class="logo1" >
+            <img src="{{ storage_path('app/public/KOP.PNG') }}" class="logo1" >
 
             <!-- Untuk hosting -->
             <!-- <img src="{{ asset('img/KOP.PNG') }}" class="logo1"> -->
@@ -118,7 +118,7 @@
             <br>
             <br>
             <br>
-            <b>(Materai 6000)</b>
+            <b>(Materai 10000)</b>
             <br>
             <br>
             <br>
