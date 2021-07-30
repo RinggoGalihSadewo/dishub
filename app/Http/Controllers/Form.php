@@ -239,6 +239,10 @@ class Form extends Controller
 
     }
 
+    public function prinsip(Client $client)
+    {
+        return view('admin.prinsip', compact('client'));
+    }
     /**
      * Update the specified resource in storage.
      *

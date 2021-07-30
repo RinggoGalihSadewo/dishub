@@ -67,6 +67,12 @@ Route::group(['middleware' => 'CekLogin'], function() {
 	//admin detail
 	Route::get('/admin/daftar/detail/{client}', 'App\Http\Controllers\Form@show');
 
+	//admin prinsip
+	Route::get('/admin/daftar/prinsip/{client}', 'App\Http\Controllers\Form@prinsip');
+
+	//admin kirim surat prinsip
+	Route::patch('admin/daftar/prinsip', 'App\Http\Controllers\MailController@prinsip');
+
 	//admin tambah data
 	Route::post('/admin/daftar', 'App\Http\Controllers\Form@store');
 
