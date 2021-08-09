@@ -48,7 +48,7 @@
       <a class="navbar-brand" href="{{url('/')}}">
         <img src="/img/logo1.png" class="logo1">
         <img src="/img/logo2.png" class="logo2">
-        <h3 class="d-md-inline d-none">Website Perizinan Trayek Transportasi Darat</h3>
+        <h3 class="d-md-inline d-none">Website Perizinan Prinsip Trayek Angkutan Kota</h3>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
