@@ -30,7 +30,9 @@
 		<div class="lampiran">
 			<p>Bandar Lampung, {{ $officialDate }} </p>
 			Kepada
-			Yth. Kepala Dinas Provinsi Lampung
+			Yth. Kepala Bidang Transportasi Darat 
+            <br>
+            Dinas Perhubungan Provinsi Lampung
 
 			<p>di <b>Bandar Lampung</b></p>
 		</div>
@@ -61,7 +63,7 @@
             </table>
 
 			<br><br>
-			Dengan ini mengajukan permohonan Izin Trayek / Izin Operasi untuk dan atas nama:
+			Dengan ini mengajukan permohonan Izin prinsip trayek Angkutan Kota
 		
 			<br><br>
 
@@ -110,7 +112,7 @@
 
 			<br><br>
 			<p style="text-align: justify;">
-			Bersama ini kami mengajukan permohonan izin Trayek / Izin Operasi dengan melampirkan persyaratan sesuai ketentuan Demikian Surat Permohonan ini telah di isi dengan sebenarnya dan apabila di kemudian hari ternyata keterangan - keterangan tersebut tidak benar, maka kami bersedia menerima sanksi / di tuntut sesuai dengan peraturan perundang - undangan yang berlaku
+			Bersama ini kami mengajukan permohonan izin prinsip trayek Angkutan Kota dengan melampirkan persyaratan sesuai ketentuan Demikian Surat Permohonan ini telah di isi dengan sebenarnya dan apabila di kemudian hari ternyata keterangan - keterangan tersebut tidak benar, maka kami bersedia menerima sanksi / di tuntut sesuai dengan peraturan perundang - undangan yang berlaku
 			</p>
             <br><br>
 		</div>

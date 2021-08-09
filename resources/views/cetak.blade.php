@@ -50,9 +50,10 @@
             <p style="position: absolute; right: 0px;">Bandar Lampung, {{ $officialDate }} </p>
             <br>
             <p style="position: absolute; right: 0px;">Kepada
-            Yth. Kepala Dinas Provinsi Lampung</p>
+            Yth. Kepala Bidang Transportasi Darat 
             <br>
-            <p style="position: absolute; right: 0px;">di <b>Bandar Lampung</b></p>
+            Dinas Perhubungan Provinsi Lampung<br>
+            di <b>Bandar Lampung</p>
         </div>
 
         <br><br><br><br>
@@ -80,7 +81,7 @@
                 <tr>
             </table>
             <br>
-            Dengan ini mengajukan permohonan Izin Trayek / Izin Operasi untuk dan atas nama:
+            Dengan ini mengajukan permohonan Izin prinsip trayek Angkutan Kota:
             <br><br>
 
             <table border="0" cellpadding="0" cellspacing="0">
@@ -107,7 +108,7 @@
             </table>
 
             <p style="text-align: justify;">
-            Bersama ini kami mengajukan permohonan izin Trayek / Izin Operasi dengan melampirkan persyaratan sesuai ketentuan Demikian Surat Permohonan ini telah di isi dengan sebenarnya dan apabila di kemudian hari ternyata keterangan - keterangan tersebut tidak benar, maka kami bersedia menerima sanksi / di tuntut sesuai dengan peraturan perundang - undangan yang berlaku
+            Bersama ini kami mengajukan permohonan izin prinsip trayek Angkutan Kota dengan melampirkan persyaratan sesuai ketentuan Demikian Surat Permohonan ini telah di isi dengan sebenarnya dan apabila di kemudian hari ternyata keterangan - keterangan tersebut tidak benar, maka kami bersedia menerima sanksi / di tuntut sesuai dengan peraturan perundang - undangan yang berlaku
             </p>
         </div>
 
