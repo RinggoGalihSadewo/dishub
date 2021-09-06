@@ -20,6 +20,8 @@ class CreateClientsTable extends Migration
             $table->string('ttl'); 
             $table->string('email');
             $table->string('namaPerusahaan');
+            $table->string('longtitude');
+            $table->string('lattitude');
             $table->string('trayek');
             $table->string('jmlhArmada');
             $table->timestamps();
